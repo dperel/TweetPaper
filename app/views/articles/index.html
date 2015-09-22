@@ -1,0 +1,13 @@
+<h1> Add a new section: </h1>
+<p>
+<%= link_to("New article", new_article_path)%>
+</p>
+
+<h1> Your newspaper: </h1>
+
+<%= @articles.map do |article|%>
+<div><%= article.title %></div><br />
+<div><%= article.tweet_1 %></div><br />
+<div><%= article.tweet_2 %></div>
+<%= link_to("delete article", article_path(article), :method => :delete)%>
+<%end%>

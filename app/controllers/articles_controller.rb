@@ -1,14 +1,32 @@
 class ArticlesController < ApplicationController
+
   def new
-    #adds an article subscription -- a twitter search 
+    @article = Article.new
+  end
+
+  def create
+    @article = Article.populate(article_params)
+    if @article
+      @articles = Article.all
+      render :index
+    else
+      render js: "alert('Article search did not go through');"
+    end
   end
 
   def index
-    #your newspaper
+    @articles = Article.all
   end
 
-  def delete
-    #delete a specific article from paper
+  def destroy
+    Article.destroy(params[:id])
+    redirect_to :back 
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title)
   end
 
 

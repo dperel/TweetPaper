@@ -1,0 +1,21 @@
+div.articleHolder {
+  width: 100%;
+  border-style: solid;
+  border-color: #fffff;
+  display: table;
+  table-layout: fixed;
+}
+
+div.articleHolder img {
+  width: 200px;
+}
+
+div .child {
+  width: 225px;
+  border: 1px solid black;
+  display: table-cell;
+}
+
+h1, h2, h3 {
+  font-family: 'News Cycle', sans-serif;
+}

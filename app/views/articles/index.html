@@ -1,15 +1,20 @@
-<h1> Add a new section: </h1>
-<p>
-<%= link_to("New article", new_article_path)%>
-</p>
-
-
-<h1> Your newspaper: </h1>
-
+<div>
+<h1> <%= link_to("Add a new section", new_article_path)%> </h1>
+</div>
+<div class="title">
+<h1> Your Newspaper: </h1>
+</div>
+<div class="articleHolder">
 <%= @articles.map do |article|%>
-<div><%= image_tag article.picture_url %></div>
-<div><%= article.tweet_1 %></div><br />
-<div><%= article.tweet_2 %></div><br />
-<div><%= article.tweet_3 %></div><br />
-<%= link_to("delete article", article_path(article), :method => :delete)%><br />
+  <div class="child">
+    <p><h2><%= article.title%></h2></p>
+    <p><%= image_tag article.picture_url %></p>
+    <p><%= article.tweet_1 %></p>
+    <p><%= article.tweet_2 %></p>
+    <p><%= article.tweet_3 %></p>
+    <p><%= article.tweet_4 %></p>
+    <p><%= article.tweet_5 %></p>
+    <%= link_to("Delete section", article_path(article), :method => :delete)%><br />
+  </div>
 <%end%>
+</div>

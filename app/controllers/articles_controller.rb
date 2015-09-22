@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
       @articles = Article.all
       render :index
     else
-      render js: "alert('Article search did not go through');"
+      render js: "alert('Article search did not go through');" 
     end
   end
 
@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     Article.destroy(params[:id])
-    redirect_to :back 
+    redirect_to :back
   end
 
   private

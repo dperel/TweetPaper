@@ -7673,3 +7673,2168 @@ Processing by ArticlesController#create as HTML
   [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
   Rendered articles/index.html within layouts/application (2.6ms)
 Completed 200 OK in 284ms (Views: 35.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 18:57:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (13.2ms)
+Completed 200 OK in 197ms (Views: 185.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 18:57:06 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-92b8b3ac30825c47646aa103ab63fa81938396b770b1c22b2c0b3a8e3be94e6c.css?body=1" for ::1 at 2015-09-22 18:57:06 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 18:57:56 -0400
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:11: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...ppend=(if article.picture_url );@output_buffer.safe_append='
+...                               ^
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;    end 
+                ^
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:21: syntax error, unexpected keyword_end, expecting ')'
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:24: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:26: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/index.html:11: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/articles/index.html:13: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/index.html:21: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/index.html:24: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/index.html:26: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.3ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 18:58:26 -0400
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:11: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...ticle.picture_url.length > 0  );@output_buffer.safe_append='
+...                               ^
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:13: syntax error, unexpected keyword_end, expecting ')'
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:21: syntax error, unexpected keyword_end, expecting ')'
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:24: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:26: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/index.html:11: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/articles/index.html:13: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/index.html:21: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/index.html:24: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/index.html:26: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 18:58:54 -0400
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:11: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...article.picture_url.length > 0);@output_buffer.safe_append='
+...                               ^
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:13: syntax error, unexpected keyword_end
+    '.freeze;@output_buffer.append=(end);@output_buffer.safe_append='
+                                       ^
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:21: syntax error, unexpected keyword_end, expecting ')'
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:24: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/davidperel/Code/tweetpaper/TweetPaper/app/views/articles/index.html:26: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/index.html:11: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/articles/index.html:13: syntax error, unexpected keyword_end
+  app/views/articles/index.html:21: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/index.html:24: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/index.html:26: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.7ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 18:59:07 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-92b8b3ac30825c47646aa103ab63fa81938396b770b1c22b2c0b3a8e3be94e6c.css?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 18:59:07 -0400
+
+
+Started GET "/articles/new" for ::1 at 2015-09-22 18:59:11 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (16.7ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 18:59:14 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x4HmhAln8IXmjKT9bYAB19y/Y2mTZjrgCifwE5NJl9CR2/72IMK8WmUvrdiFgFOZBgNrBDAO/GfAtQyjeHEWdw==", "article"=>{"title"=>"Sushi"}, "commit"=>"Create Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Sushi"], ["tweet_1", "guglielmoscilla: NUOVO PRIMO VIDEO a tema #sushi :D\nRitwittate in segno di amore &lt;3 \nhttps://t.co/LxZU3fcQYY"], ["tweet_2", "dankanter: Right now @off_themenu is on Snapchat is eating at one of my favourite sushi spots - Sugarfish. Can't wait to see what they order!"], ["tweet_3", "djcarnage: 🍣 SUSHI BOYZ 🍣 http://t.co/cw9KioFCuL"], ["tweet_4", "JennyJohnsonHi5: My idea of Hell would be Ben Affleck reading me a sushi menu in his \"Boston guy\" voice for all eternity."], ["tweet_5", "Yahoo: Survey says: #iPhone owners like Superman and sushi, but #Android fans favor Batman and booze http://t.co/GBPdvWRhPX http://t.co/qOmgCUs5EL"], ["created_at", "2015-09-22 22:59:14.729073"], ["updated_at", "2015-09-22 22:59:14.729073"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (2.7ms)
+Completed 200 OK in 285ms (Views: 38.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:07:08 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `font3' for #<#<Class:0x007fa6402bf398>:0x007fa6416aac90>):
+    1: <p><%= image_tag font3.png %></p>
+    2: <div>
+    3: <h1> <%= link_to("Add a new section", new_article_path)%> </h1>
+    4: </div>
+  app/views/articles/index.html:1:in `_app_views_articles_index_html___2836933914977843769_70176019398720'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.5ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:07:19 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (1.9ms)
+Completed 200 OK in 100ms (Views: 99.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-92b8b3ac30825c47646aa103ab63fa81938396b770b1c22b2c0b3a8e3be94e6c.css?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:07:19 -0400
+
+
+Started GET "/font3.png" for ::1 at 2015-09-22 19:07:19 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font3.png"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:07:24 -0400
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Asset names passed to helpers should not include the "/assets/" prefix. Instead of "/assets/font3.png", use "font3.png"):
+    1: <p><%= image_tag '/assets/font3.png' %></p>
+    2: <div>
+    3: <h1> <%= link_to("Add a new section", new_article_path)%> </h1>
+    4: </div>
+  app/views/articles/index.html:1:in `_app_views_articles_index_html___2836933914977843769_70175987736840'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.6ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:07:33 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (5.3ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-92b8b3ac30825c47646aa103ab63fa81938396b770b1c22b2c0b3a8e3be94e6c.css?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/assets/font3-011086525c27af22eef2c44d8e5f810b4c82a30b15f67a3535a8da2904097a56.png" for ::1 at 2015-09-22 19:07:33 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:07:41 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/articles.self-92b8b3ac30825c47646aa103ab63fa81938396b770b1c22b2c0b3a8e3be94e6c.css?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/assets/font3-011086525c27af22eef2c44d8e5f810b4c82a30b15f67a3535a8da2904097a56.png" for ::1 at 2015-09-22 19:07:41 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:07:43 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/articles.self-92b8b3ac30825c47646aa103ab63fa81938396b770b1c22b2c0b3a8e3be94e6c.css?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/assets/font3-011086525c27af22eef2c44d8e5f810b4c82a30b15f67a3535a8da2904097a56.png" for ::1 at 2015-09-22 19:07:43 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:09:14 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (10.4ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-92b8b3ac30825c47646aa103ab63fa81938396b770b1c22b2c0b3a8e3be94e6c.css?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:09:14 -0400
+
+
+Started DELETE "/articles/29" for ::1 at 2015-09-22 19:09:30 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dVl1DP6eApPbv+uLsGXJ/lI5cheGdyJcUFuPXLKxHWgjA21+1ztOTFgc4q5YZZuwiIV6eiUf5NuayXPsWYmczw==", "id"=>"29"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 29]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:09:30 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-22 19:09:33 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:09:41 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpVNssIEj4ilJcHu14jq0hSyeOSAB67SGSwiI65gdp3Mz1XA66HDVyaGyMs/iLiczg5wiSNvaFXTvt6TRVj3Og==", "article"=>{"title"=>"New York City"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "New York City"], ["tweet_1", "NYDailyNews: Pizza Rat is an inspirational tale of the New York City hustle. http://t.co/NqSraNLYr1 http://t.co/9nFBSdE2W1"], ["tweet_2", "OTYOfficial: Flying home tonight! Going to miss New York! Such an incredible city! Hope you're all good 😘 - P x"], ["tweet_3", "500px: Autumn in Central Park, New York City. Photo by @travelinglens: https://t.co/OuljrJ90T6 #TravelTuesday http://t.co/1ScpyZvlHV"], ["tweet_4", "JoeFloccari: #BREAKING: Only in New York City can you see a rat carry a pizza down subway steps... #PizzaRat #ILoveNY http://t.co/b52IjiaHoM"], ["tweet_5", "DailyMail: #PizzaRat is NYC's new hero http://t.co/8I1Clgj2ve http://t.co/Edrs7WjNrQ"], ["created_at", "2015-09-22 23:09:41.630350"], ["updated_at", "2015-09-22 23:09:41.630350"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.2ms)
+Completed 200 OK in 304ms (Views: 36.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:10:51 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (5.4ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-cbc0a4ab0e82adf30cb2885a829ef358e920bf75f197576cd642a785f73dc908.css?body=1" for ::1 at 2015-09-22 19:10:52 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:10:55 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:11:06 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (2.6ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/articles.self-a762a309c7292cd833a6ee7402599356ac11be39e27e58eab2ee237892d264b3.css?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:11:06 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:12:12 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.8ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/articles.self-912f7bc575f891a4d6893142503e2bd0a63e88bd5b25d00a2712f9804fa1a64c.css?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:12:12 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:12:49 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 50.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-762839eecac93041c0ae6bdc8426bdeb1aafc5dfe12af62dd2b76d33c7d0e6c1.css?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:12:49 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:13:10 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (2.7ms)
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-ecedf3c625b66ead45c25a35540ea857f593136b4f45724775672699926603cd.css?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:13:10 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:13:13 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (4.2ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-a5f65a7dd6184ead87bebd2454cdbfb2b6819d4576985b7215c32db23c9dca90.css?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:13:13 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:13:20 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.4ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/articles.self-2365ff613932af87798d023694f6b42ad413c6dd23c5d5ae29a2291deb01ec94.css?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:13:20 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:13:53 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (2.6ms)
+Completed 200 OK in 57ms (Views: 56.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-9eb039b98961378cd6d44e11de2ee25be1dc16f06f29d943f10e9294a0e2378f.css?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:13:53 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:13:56 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:15:35 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (3.0ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-2e7ca5428044070a05b2ad577aed353672e23ebb3ed9f9c7cb655cfd8f184f02.css?body=1" for ::1 at 2015-09-22 19:15:35 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:15:51 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (5.8ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/articles.self-2e7ca5428044070a05b2ad577aed353672e23ebb3ed9f9c7cb655cfd8f184f02.css?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:15:51 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:16:22 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-2e7ca5428044070a05b2ad577aed353672e23ebb3ed9f9c7cb655cfd8f184f02.css?body=1" for ::1 at 2015-09-22 19:16:22 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:16:22 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:16:22 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:16:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:16:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:16:22 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:16:23 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:16:23 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:16:23 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:16:41 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.2ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-2e7ca5428044070a05b2ad577aed353672e23ebb3ed9f9c7cb655cfd8f184f02.css?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:16:41 -0400
+
+
+Started GET "/articles/new" for ::1 at 2015-09-22 19:17:19 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:17:23 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:17:23.412343"], ["updated_at", "2015-09-22 23:17:23.412343"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.7ms)
+Completed 200 OK in 286ms (Views: 35.7ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:21:53 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:21:53.578788"], ["updated_at", "2015-09-22 23:21:53.578788"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (7.4ms)
+Completed 200 OK in 291ms (Views: 47.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/articles.self-2e7ca5428044070a05b2ad577aed353672e23ebb3ed9f9c7cb655cfd8f184f02.css?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:21:53 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:22:24 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:22:25.165819"], ["updated_at", "2015-09-22 23:22:25.165819"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.8ms)
+Completed 200 OK in 644ms (Views: 33.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/articles.self-2e7ca5428044070a05b2ad577aed353672e23ebb3ed9f9c7cb655cfd8f184f02.css?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:22:25 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:23:52 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:23:52.721925"], ["updated_at", "2015-09-22 23:23:52.721925"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.9ms)
+Completed 200 OK in 288ms (Views: 61.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/articles.self-4cdefcc586306f427d3edefd9059bc3dcd454c31d20a8c75e2286fbc059a8b6c.css?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:23:52 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:25:07 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:25:07.826574"], ["updated_at", "2015-09-22 23:25:07.826574"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.0ms)
+Completed 200 OK in 633ms (Views: 59.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/articles.self-4baa9899cb0b13bc25a1befe8cf1a24f434b0c9f7cec034b9379bb9d69c34c7b.css?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:25:07 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:25:13 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:25:13.829222"], ["updated_at", "2015-09-22 23:25:13.829222"]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.8ms)
+Completed 200 OK in 296ms (Views: 61.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/articles.self-2dd9328e9c3b1d9a1da5c2c53bd0e737b06bc71df5c0698c2096dc0345467813.css?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:25:13 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:25:22 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:25:22.901282"], ["updated_at", "2015-09-22 23:25:22.901282"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (7.2ms)
+Completed 200 OK in 392ms (Views: 71.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/articles.self-86f01331f91add3661b82735fdb75fcc3fb6ef555e703a44192db998bd45c1fa.css?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:25:23 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:25:32 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:25:32.671938"], ["updated_at", "2015-09-22 23:25:32.671938"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (5.6ms)
+Completed 200 OK in 296ms (Views: 62.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/articles.self-71c97b6b69ec41400ff622f3c2603c2a88178cda14123ac18a6bf7b66c8bdab4.css?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:25:32 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:25:49 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:25:50.153992"], ["updated_at", "2015-09-22 23:25:50.153992"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.9ms)
+Completed 200 OK in 657ms (Views: 47.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/articles.self-71c97b6b69ec41400ff622f3c2603c2a88178cda14123ac18a6bf7b66c8bdab4.css?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:25:50 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:26:10 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:26:11.596157"], ["updated_at", "2015-09-22 23:26:11.596157"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (7.5ms)
+Completed 200 OK in 670ms (Views: 57.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/articles.self-58ce54d34d4547d11a4cd3d9b222fafc214a3121f1cc5fd232eb6a4101ce9dde.css?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:26:11 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:26:18 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:26:18.273137"], ["updated_at", "2015-09-22 23:26:18.273137"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (7.5ms)
+Completed 200 OK in 248ms (Views: 62.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/articles.self-81f1d3a1b786a2a4caf217343f6f17b5836fcd0772b2bac3cb2a613b0e120c64.css?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:26:18 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:26:26 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:26:26.264319"], ["updated_at", "2015-09-22 23:26:26.264319"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.6ms)
+Completed 200 OK in 269ms (Views: 66.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/articles.self-817e00c7f0bc3737f008766cc286289ffbdc4d65815e035a88dcee0e03f0f0eb.css?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:26:26 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:26:39 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:26:40.100123"], ["updated_at", "2015-09-22 23:26:40.100123"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (8.6ms)
+Completed 200 OK in 677ms (Views: 70.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/articles.self-30b26e2b82047ec6cedca4e5bc2ba21d2bb4df62de5a3d097b59128f97b6da04.css?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:26:40 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:26:54 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:26:55.324898"], ["updated_at", "2015-09-22 23:26:55.324898"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (12.7ms)
+Completed 200 OK in 692ms (Views: 64.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/articles.self-a22a7e3edead3c911f121ec92b5fb1eab4358875dd0b5983ee50a40224d7a2d2.css?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:26:55 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:26:57 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGU2qE1xVMlLL4C9oSTNGRiX09Bci163rtmgxnnsIGhiPy7aZNQYFsiMiZhJJJ9Xwivbvf/jmDBkS1x2ktShzw==", "article"=>{"title"=>"cats"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["picture_url", "http://pbs.twimg.com/media/CPdXr-dW8AAQ9Lz.png"], ["tweet_1", "YouTube: Happy Monday! Here are a bunch of cats playing with colorful balls. https://t.co/wosE738auU http://t.co/wEkWVdQn4J"], ["tweet_2", "DancingABC: Watch that Salsa Sizzle! @alexavega and @MarkBallas let the big cats loose! 🐆 💃🐆 #DWTS"], ["tweet_3", "BBCRadio4: 🐱 How cats won the Internet (with some great cat videos) http://t.co/tlOyV0EF7m http://t.co/hpjpAw7TtO"], ["tweet_4", "SunderlandAFC: Deadline day signing @yedlinny will make his Black Cats debut as he starts ahead of Billy Jones tonight http://t.co/RTAtez7KNu"], ["tweet_5", "tommcfly: Watching @mrsgifletcher doing yoga on Lorraine...with cats... https://t.co/7kkykGNHIs"], ["created_at", "2015-09-22 23:26:57.656899"], ["updated_at", "2015-09-22 23:26:57.656899"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (8.4ms)
+Completed 200 OK in 244ms (Views: 42.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/articles.self-a22a7e3edead3c911f121ec92b5fb1eab4358875dd0b5983ee50a40224d7a2d2.css?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:26:57 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:02 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/34" for ::1 at 2015-09-22 19:27:09 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tMXsKx/acbNoeULGGWlCQ6O+eak2pmkl4WjtNsb0bWjin/RZNn89bOvaS+PxaRANeQJxxJXOr6Ir+hGGLczszw==", "id"=>"34"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 34]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 34]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:09 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (14.2ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/40" for ::1 at 2015-09-22 19:27:11 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jziOkw27YkiwdDt12YgIlHfp3X+Bao+sFL+ZrTvHrTPZYpbhJB4ulzPXMlAxiFrarVXVEiICSSveLWUd0P8slA==", "id"=>"40"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 40]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:11 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/43" for ::1 at 2015-09-22 19:27:14 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zC82y79V8soyb+aOY8ZR1xUiujOCu1fwLHLWuCoJst+adS65lvC+FbHM76uLxgOZz56yXiHTkXfm4CoIwTEzeA==", "id"=>"43"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 43]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 43]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:14 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/39" for ::1 at 2015-09-22 19:27:16 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jScXsmyE+PA2X0kPkpWuqN4UJ66/9FTJDhrl0sRTbfDbfQ/ARSG0L7X8QCp6lfzmBKgvwxyckk7EiBliL2vsVw==", "id"=>"39"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 39]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 39]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:16 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (4.6ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/44" for ::1 at 2015-09-22 19:27:19 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/3vTJ4UDpEXnrLyAevs30lR9B1JdUBuNeRRj+Ma6eFWpIctVrKbommQPtaWS+2WcjsEPP/443Qqzhp9ILYL58g==", "id"=>"44"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 44]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 44]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:19 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (5.9ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/49" for ::1 at 2015-09-22 19:27:21 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IF2mJBsYlL1/wpe43jk43og+HycLFkxqWTvCPoGyqCJ2B75WMr3YYvxhnp02OWqQUoIXSqh+iu2TqT6OaoophQ==", "id"=>"49"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 49]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 49]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:21 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (13.8ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/48" for ::1 at 2015-09-22 19:27:25 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lAXcP7zKBkEO/ZljloYwQ7/RE7+ZuEQd610gw7Y4uxjCX8RNlW9Kno1ekEZ+hmINZW0b0jrQgpohz9xzXQA6vw==", "id"=>"48"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 48]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 48]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:25 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.2ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/41" for ::1 at 2015-09-22 19:27:27 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QaC/tkoWtTE/5Ey98meucqHpWZGlUrrlxpTbpMbzC1gX+qfEY7P57rxHRZgaZ/w8e1VR/AY6fGIMBicULcuK/w==", "id"=>"41"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 41]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:27 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (6.1ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/36" for ::1 at 2015-09-22 19:27:29 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"O3zA4P8ZXh2MB80aZoNoNQ8EWSHj+ZIIW3BjJ7mxU9ptJtiS1rwSwg+kxD+Ogzp71bhRTECRVI+R4p+XUonSfQ==", "id"=>"36"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 36]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 36]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:29 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (7.6ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/37" for ::1 at 2015-09-22 19:27:31 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w14vz3Z9YKHggszbh12enlv0dNUUIU8D9TP7z6G1EDGVBDe9X9gsfmMhxf5vXczQgUh8uLdJiYQ/oQd/So2Rlg==", "id"=>"37"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 37]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:31 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (3.8ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/38" for ::1 at 2015-09-22 19:27:33 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9mdOgm9BMEfQt3r8PbdkBrWSauQgXtg3h0BbwqaLMtWgPVbwRuR8mFMUc9nVtzZIby5iiYM2HrBN0qdyTbOzcg==", "id"=>"38"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 38]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 38]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:33 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.2ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/42" for ::1 at 2015-09-22 19:27:34 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Mz0IqsYZFkOvrSlUZ2Xmrnb5p/vUI2KZ5Zt31qfNUu9lZxDY77xanCwOIHGPZbTgrEWvlndLpB4vCYtmTPXTSA==", "id"=>"42"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 42]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 42]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:34 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (5.0ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/45" for ::1 at 2015-09-22 19:27:36 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"woF+oZP8getPYMmmZgdoj+ylOChwdzzP8eawsQHMbAyU22bTulnNNMzDwIOOBzrBNhkwRdMf+kg7dEwB6vTtqw==", "id"=>"45"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 45]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 45]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:36 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.9ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:27:53 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-f5eb856e21ebc63995b13a1af4c0c9a7a59e8693d52f10ee8f342bbdf39b4b24.css?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:27:53 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:11 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.8ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/articles.self-852dd271b566db970c4f14c5b75e2b2babc0943ede4130e0223e343272174723.css?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:28:11 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:16 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (3.1ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/articles.self-d4da3a4f425b8d93049f1413355fb2f3444e54ad648f13df4b57e1fb480f9bf8.css?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:28:16 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:22 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.2ms)
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/articles.self-663c2093d86872d3cd6e495d6e6fd39a098ead9e8a175eaf1ab6ca8a6ea5b7d2.css?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:28:22 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:27 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (3.2ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-5abf546d158be3f0adebcbf8e0b132c0899d390380c4252749008d41c9d71631.css?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:28:27 -0400
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:31 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (3.1ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-0397813deccef4db50f2b25129906d0f2dbdb0bbc1f43f975ad2e7ae4096b12e.css?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:28:31 -0400
+
+
+Started DELETE "/articles/32" for ::1 at 2015-09-22 19:28:40 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qJbOQKW8obxXtL0eRJ1/pje2yTKIg84YwimFaWRlW8/+zNYyjBntY9QXtDusnS3o7QrBXyvrCJ8Iu3nZj13aaA==", "id"=>"32"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 32]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 32]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:40 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/50" for ::1 at 2015-09-22 19:28:43 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fv9CkumymbT8srJD/Xf1fKOJL8krXU0Q6N6v0EmIQ1oopVrgwBfVa38Ru2YVd6cyeTUnpIg1i5ciTFNgorDC/Q==", "id"=>"50"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 50]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 50]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:43 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/47" for ::1 at 2015-09-22 19:28:46 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FZxvVEldDfW0Fcx303hHYcJPkkXb6GpCKCnXRKSS8WmDGnPeIA46FVzXhQ3TbNTXbU2JLQHZy7CMlvt+arKYg==", "id"=>"47"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 47]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 47]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:28:46 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-09-22 19:29:32 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (2.9ms)
+Completed 200 OK in 70ms (Views: 69.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-923f6c0065d841018bf97101c550bb5862324e8eb5f826cd8f0c9176c936a119.css?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:29:32 -0400
+
+
+Started GET "/articles/new" for ::1 at 2015-09-22 19:29:37 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:29:52 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cduYjLhj+7fPQNTeOvMUl5kyd827lKez0cf1kWy4mZongYD+kca3aEzj3fvS80bZQ45/oBj8YTQbVQkhh4AYPQ==", "article"=>{"title"=>"Football"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Football"], ["tweet_1", "BMarshh54: @BMarshall on Monday night football tonight?... Means I'm about to get all his mentions about fantasy points.. Hope you ball out lol"], ["tweet_2", "SportsCenter: Two TCU football players arrested on felony charges after beating up a student and stealing a case of cheap beer. http://t.co/9YrVddp4Ak"], ["tweet_3", "BBCSport: Arsenal defender Gabriel wins appeal against red card. \n\nhttp://t.co/sapaay69lT http://t.co/DoVdDxNOb2"], ["tweet_4", "BBCSport: Chelsea team doctor Eva Carneiro has left the club.\n\nRead more: http://t.co/zDbZMoAdB8 #CFC http://t.co/w0TXmXEirH"], ["tweet_5", "ChampionsLeague: Philipp Lahm, Bayern captain: \"I've been playing football for a few years now… I have never seen anything like this!\" http://t.co/1aiotZP5ix"], ["created_at", "2015-09-22 23:29:52.220895"], ["updated_at", "2015-09-22 23:29:52.220895"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (5.2ms)
+Completed 200 OK in 240ms (Views: 33.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:30:47 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cduYjLhj+7fPQNTeOvMUl5kyd827lKez0cf1kWy4mZongYD+kca3aEzj3fvS80bZQ45/oBj8YTQbVQkhh4AYPQ==", "article"=>{"title"=>"Football"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Football"], ["tweet_1", "BMarshh54: @BMarshall on Monday night football tonight?... Means I'm about to get all his mentions about fantasy points.. Hope you ball out lol"], ["tweet_2", "SportsCenter: Two TCU football players arrested on felony charges after beating up a student and stealing a case of cheap beer. http://t.co/9YrVddp4Ak"], ["tweet_3", "BBCSport: Arsenal defender Gabriel wins appeal against red card. \n\nhttp://t.co/sapaay69lT http://t.co/DoVdDxNOb2"], ["tweet_4", "BBCSport: Chelsea team doctor Eva Carneiro has left the club.\n\nRead more: http://t.co/zDbZMoAdB8 #CFC http://t.co/w0TXmXEirH"], ["tweet_5", "ChampionsLeague: Philipp Lahm, Bayern captain: \"I've been playing football for a few years now… I have never seen anything like this!\" http://t.co/1aiotZP5ix"], ["created_at", "2015-09-22 23:30:47.853047"], ["updated_at", "2015-09-22 23:30:47.853047"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  Rendered articles/index.html within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 635ms (ActiveRecord: 3.4ms)
+
+ActionView::Template::Error (undefined method `now' for Date:Class):
+     6: 
+     7: </div>
+     8: <div class="articleHolder">
+     9:   <%=Date.now%> 
+    10: <%= @articles.map do |article|%>
+    11:   <div class="child">
+    12:     <p><h1><%= article.title%></h1></p>
+  app/views/articles/index.html:9:in `_app_views_articles_index_html___2836933914977843769_70176033259540'
+  app/controllers/articles_controller.rb:11:in `create'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (60.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (134.3ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:32:00 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cduYjLhj+7fPQNTeOvMUl5kyd827lKez0cf1kWy4mZongYD+kca3aEzj3fvS80bZQ45/oBj8YTQbVQkhh4AYPQ==", "article"=>{"title"=>"Football"}, "commit"=>"Create Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Football"], ["tweet_1", "BMarshh54: @BMarshall on Monday night football tonight?... Means I'm about to get all his mentions about fantasy points.. Hope you ball out lol"], ["tweet_2", "SportsCenter: Two TCU football players arrested on felony charges after beating up a student and stealing a case of cheap beer. http://t.co/9YrVddp4Ak"], ["tweet_3", "BBCSport: Arsenal defender Gabriel wins appeal against red card. \n\nhttp://t.co/sapaay69lT http://t.co/DoVdDxNOb2"], ["tweet_4", "BBCSport: Chelsea team doctor Eva Carneiro has left the club.\n\nRead more: http://t.co/zDbZMoAdB8 #CFC http://t.co/w0TXmXEirH"], ["tweet_5", "ChampionsLeague: Philipp Lahm, Bayern captain: \"I've been playing football for a few years now… I have never seen anything like this!\" http://t.co/1aiotZP5ix"], ["created_at", "2015-09-22 23:32:01.191285"], ["updated_at", "2015-09-22 23:32:01.191285"]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+  Rendered articles/index.html within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 4.5ms)
+
+ActionView::Template::Error (undefined method `now' for Date:Class):
+     6: 
+     7: </div>
+     8: <div class="articleHolder">
+     9:   <%=Date.now%> 
+    10: <%= @articles.map do |article|%>
+    11:   <div class="child">
+    12:     <p><h1><%= article.title%></h1></p>
+  app/views/articles/index.html:9:in `_app_views_articles_index_html___2836933914977843769_70176033259540'
+  app/controllers/articles_controller.rb:11:in `create'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.5ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:32:05 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cduYjLhj+7fPQNTeOvMUl5kyd827lKez0cf1kWy4mZongYD+kca3aEzj3fvS80bZQ45/oBj8YTQbVQkhh4AYPQ==", "article"=>{"title"=>"Football"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Football"], ["tweet_1", "BMarshh54: @BMarshall on Monday night football tonight?... Means I'm about to get all his mentions about fantasy points.. Hope you ball out lol"], ["tweet_2", "SportsCenter: Two TCU football players arrested on felony charges after beating up a student and stealing a case of cheap beer. http://t.co/9YrVddp4Ak"], ["tweet_3", "BBCSport: Arsenal defender Gabriel wins appeal against red card. \n\nhttp://t.co/sapaay69lT http://t.co/DoVdDxNOb2"], ["tweet_4", "BBCSport: Chelsea team doctor Eva Carneiro has left the club.\n\nRead more: http://t.co/zDbZMoAdB8 #CFC http://t.co/w0TXmXEirH"], ["tweet_5", "ChampionsLeague: Philipp Lahm, Bayern captain: \"I've been playing football for a few years now… I have never seen anything like this!\" http://t.co/1aiotZP5ix"], ["created_at", "2015-09-22 23:32:05.982299"], ["updated_at", "2015-09-22 23:32:05.982299"]]
+  [1m[35m (5.5ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (4.6ms)
+Completed 200 OK in 263ms (Views: 37.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/articles.self-923f6c0065d841018bf97101c550bb5862324e8eb5f826cd8f0c9176c936a119.css?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:32:06 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:32:28 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cduYjLhj+7fPQNTeOvMUl5kyd827lKez0cf1kWy4mZongYD+kca3aEzj3fvS80bZQ45/oBj8YTQbVQkhh4AYPQ==", "article"=>{"title"=>"Football"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Football"], ["tweet_1", "BMarshh54: @BMarshall on Monday night football tonight?... Means I'm about to get all his mentions about fantasy points.. Hope you ball out lol"], ["tweet_2", "SportsCenter: Two TCU football players arrested on felony charges after beating up a student and stealing a case of cheap beer. http://t.co/9YrVddp4Ak"], ["tweet_3", "BBCSport: Arsenal defender Gabriel wins appeal against red card. \n\nhttp://t.co/sapaay69lT http://t.co/DoVdDxNOb2"], ["tweet_4", "BBCSport: Chelsea team doctor Eva Carneiro has left the club.\n\nRead more: http://t.co/zDbZMoAdB8 #CFC http://t.co/w0TXmXEirH"], ["tweet_5", "ChampionsLeague: Philipp Lahm, Bayern captain: \"I've been playing football for a few years now… I have never seen anything like this!\" http://t.co/1aiotZP5ix"], ["created_at", "2015-09-22 23:32:28.956268"], ["updated_at", "2015-09-22 23:32:28.956268"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (7.3ms)
+Completed 200 OK in 647ms (Views: 36.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/articles.self-923f6c0065d841018bf97101c550bb5862324e8eb5f826cd8f0c9176c936a119.css?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:32:29 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:32:49 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cduYjLhj+7fPQNTeOvMUl5kyd827lKez0cf1kWy4mZongYD+kca3aEzj3fvS80bZQ45/oBj8YTQbVQkhh4AYPQ==", "article"=>{"title"=>"Football"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Football"], ["tweet_1", "BMarshh54: @BMarshall on Monday night football tonight?... Means I'm about to get all his mentions about fantasy points.. Hope you ball out lol"], ["tweet_2", "SportsCenter: Two TCU football players arrested on felony charges after beating up a student and stealing a case of cheap beer. http://t.co/9YrVddp4Ak"], ["tweet_3", "BBCSport: Arsenal defender Gabriel wins appeal against red card. \n\nhttp://t.co/sapaay69lT http://t.co/DoVdDxNOb2"], ["tweet_4", "BBCSport: Chelsea team doctor Eva Carneiro has left the club.\n\nRead more: http://t.co/zDbZMoAdB8 #CFC http://t.co/w0TXmXEirH"], ["tweet_5", "ChampionsLeague: Philipp Lahm, Bayern captain: \"I've been playing football for a few years now… I have never seen anything like this!\" http://t.co/1aiotZP5ix"], ["created_at", "2015-09-22 23:32:49.986205"], ["updated_at", "2015-09-22 23:32:49.986205"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.7ms)
+Completed 200 OK in 663ms (Views: 37.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/articles.self-923f6c0065d841018bf97101c550bb5862324e8eb5f826cd8f0c9176c936a119.css?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:32:50 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-22 19:33:00 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cduYjLhj+7fPQNTeOvMUl5kyd827lKez0cf1kWy4mZongYD+kca3aEzj3fvS80bZQ45/oBj8YTQbVQkhh4AYPQ==", "article"=>{"title"=>"Football"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Football"], ["tweet_1", "BMarshh54: @BMarshall on Monday night football tonight?... Means I'm about to get all his mentions about fantasy points.. Hope you ball out lol"], ["tweet_2", "SportsCenter: Two TCU football players arrested on felony charges after beating up a student and stealing a case of cheap beer. http://t.co/9YrVddp4Ak"], ["tweet_3", "BBCSport: Arsenal defender Gabriel wins appeal against red card. \n\nhttp://t.co/sapaay69lT http://t.co/DoVdDxNOb2"], ["tweet_4", "BBCSport: Chelsea team doctor Eva Carneiro has left the club.\n\nRead more: http://t.co/zDbZMoAdB8 #CFC http://t.co/w0TXmXEirH"], ["tweet_5", "ChampionsLeague: Philipp Lahm, Bayern captain: \"I've been playing football for a few years now… I have never seen anything like this!\" http://t.co/1aiotZP5ix"], ["created_at", "2015-09-22 23:33:00.213065"], ["updated_at", "2015-09-22 23:33:00.213065"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html within layouts/application (6.0ms)
+Completed 200 OK in 273ms (Views: 69.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/articles.self-38d6c4abf3dca21c37fcca338c74f5872646834e38abe58fae5e3d319ee61d42.css?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-22 19:33:00 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-22 19:33:00 -0400

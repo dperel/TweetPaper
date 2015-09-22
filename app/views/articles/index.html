@@ -1,13 +1,15 @@
-<div>
-<h1> <%= link_to("Add a new section", new_article_path)%> </h1>
+<div class="nav">
+<h1><%= link_to("Add a new section", new_article_path)%> </h1>
 </div>
-<div class="title">
-<h1> Your Newspaper: </h1>
+<div class="headlineImage"><%= image_tag 'font3.png' %></div>
+<h6>last updated at <%=Time.now%></h6>
+<div>
+
 </div>
 <div class="articleHolder">
 <%= @articles.map do |article|%>
   <div class="child">
-    <p><h2><%= article.title%></h2></p>
+    <p><h1><%= article.title%></h1></p>
     <p><%= image_tag article.picture_url %></p>
     <p><%= article.tweet_1 %></p>
     <p><%= article.tweet_2 %></p>

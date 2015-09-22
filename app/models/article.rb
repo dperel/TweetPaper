@@ -8,7 +8,7 @@ class Article < ActiveRecord::Base
     @@client.search(article_params["title"], result_type: "popular").take(5).collect do |tweet|
         results.push(tweet)
       end
-    @article.title = article_params["title"]
+    @article.title = article_params["title"].capitalize
     @article.picture_url = results[0].media[0].to_hash[:media_url] if results[0].media?
     @article.tweet_1 = "#{results[0].user.screen_name}: #{results[0].text}"
     @article.tweet_2 = "#{results[1].user.screen_name}: #{results[1].text}"

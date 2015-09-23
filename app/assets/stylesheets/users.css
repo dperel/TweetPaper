@@ -1,0 +1,17 @@
+h1, h2, h3, h6, a {
+  font-family: 'News Cycle', sans-serif;
+  text-decoration: underline;
+}
+div.loginBox {
+    width: 500px;
+    display: block;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+
+div.container {
+   background-image: url("smallbird.png");
+   background-repeat:no-repeat;
+}

@@ -33,4 +33,9 @@ belongs_to :user
     end
   end
 
+  def self.refresh(outdated_article, current_user)
+    Article.populate(outdated_article, current_user)
+    outdated_article.destroy
+  end
+
 end

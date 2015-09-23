@@ -1,15 +1,18 @@
-<%if current_user%>
+
 <div class="nav">
-<h3><%= link_to("Add a new section", new_article_path)%> | Signed in as <%=current_user.name%></h3>
+<h3>Signed in as <%=current_user.name%>
+  | <%= link_to("Add a new section", new_article_path)%>
+   | <%= link_to("Refresh your paper", '/refresh', :method => :get)%><br />
+</h3>
 </div>
-<%end%>
+
 <div class="headlineImage"><%= image_tag 'font3.png' %>
 </div>
 <%if @articles%>
 <div class="articleHolder">
 <%= @articles.map do |article|%>
   <div class="child">
-    <p><h1><%= article.title%></h1></p>
+    <p><h1><%= article.title.upcase%></h1></p>
     <% if article.picture_url %>
     <p><%= image_tag article.picture_url %></p>
     <%end%>

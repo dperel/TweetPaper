@@ -5,12 +5,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.populate(article_params)
+    @article = Article.populate(article_params, current_user)
     if @article
       @articles = Article.all
       render :index
     else
-      render js: "alert('Article search did not go through');" 
+      render js: "alert('Article search did not go through');"
     end
   end
 
@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
     Article.destroy(params[:id])
     redirect_to :back
   end
+
 
   private
 

@@ -1,8 +1,8 @@
 require 'pry'
 class Article < ActiveRecord::Base
 
-  def self.populate(article_params)
-    establish_client
+  def self.populate(article_params, current_user)
+    establish_client(current_user)
     @article = Article.new()
     results, media = [], []
     @@client.search(article_params["title"], result_type: "popular").take(5).collect do |tweet|
@@ -18,12 +18,13 @@ class Article < ActiveRecord::Base
     @article.save
   end
 
-  def self.establish_client
+
+  def self.establish_client(current_user)
     @@client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV["twitter_consumer_key"]
       config.consumer_secret     = ENV["twitter_consumer_secret"]
-      config.access_token        = ENV["twitter_access_token"]
-      config.access_token_secret = ENV["twitter_access_token_secret"]
+      config.access_token        = current_user.token
+      config.access_token_secret = current_user.secret
     end
   end
 

@@ -16,7 +16,7 @@
 
   <%(5 - @articles.length).times do %>
     <div class="child">
-    <p><h1>Add another article!</h1></p>
+    <p><h1><%= link_to("Add a New Article!", new_article_path)%></h1></p>
     </div>
   <%end%>
 </div>

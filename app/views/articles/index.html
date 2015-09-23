@@ -1,11 +1,10 @@
 <div class="nav">
 <h3>Signed in as <%=current_user.name%>
-  | <%= link_to("Edit your Articles", new_article_path)%>
-   | <%= link_to("Refresh your paper", '/refresh', :method => :get)%><br />
+   |  Want Fresh News? <%= link_to("Refresh your Paper", '/refresh', :method => :get)%><br />
 </h3>
 </div>
 
 <div class="headlineImage"><%= image_tag 'font3.png' %>
 </div>
 
-<%= render "articles" %> 
+<%= render "articles" %>

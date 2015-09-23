@@ -21520,3 +21520,481 @@ Processing by ArticlesController#index as HTML
   Rendered articles/_articles.html.erb (2.4ms)
   Rendered articles/index.html within layouts/application (6.1ms)
 Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2015-09-23 17:43:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (8.2ms)
+  Rendered articles/index.html within layouts/application (125.5ms)
+Completed 200 OK in 281ms (Views: 226.5ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/articles/73" for ::1 at 2015-09-23 17:44:51 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CkX4etojLMDLYE2R9BWqwsRNymkQeAEOQXcxtO/hojNIdXyOkPH+bAJKkkBMEoCvDS7ytTFC3zOd/L+wiLlQWQ==", "id"=>"73"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 73]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 73]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.2ms)
+  Rendered articles/index.html within layouts/application (5.4ms)
+Completed 200 OK in 56ms (Views: 49.8ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/articles/74" for ::1 at 2015-09-23 17:44:53 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e7DXkqNBv3u+eEGAJHlQ4q2pzcMinYQB1dIhjPylwpo5gFNm6ZNt13dSnlGcfnqPZMr1HwOnWjwJWa+Im/0w8A==", "id"=>"74"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 74]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 74]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.3ms)
+  Rendered articles/index.html within layouts/application (24.1ms)
+Completed 200 OK in 74ms (Views: 67.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 17:44:56 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (32.9ms)
+Completed 200 OK in 91ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 17:45:01 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jyPduO4LnPO87hfuZkLlaW7rKKIU5RV8eE57BZr6nODNE1lMpNlOX3XEyD/eRc8Ep4gQfjXfy0GkxfUB/aJuig==", "article"=>{"title"=>"Donald Trump"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Donald trump"], ["picture_url", "http://pbs.twimg.com/media/CPngVc5VEAAkmGY.jpg"], ["tweet_1", "LicSarahi: RT @HuffingtonPost: Donald Trump is fighting with Fox News. Again. http://t.co/LuPbYyixur http://t.co/IE54lRA9Vx"], ["tweet_2", "sha3gotti: RT @FadedAliens: \"Donald Trump wants illegal aliens gone.\" http://t.co/cQ3eHFi89e"], ["tweet_3", "valgreenalex: RT @vicenews: \"Trump embodies separation, solving problems with anger, fear, and personal differences.\" http://t.co/iK7wRsL2vJ http://t.co/…"], ["tweet_4", "DeanWeiner1: Omg my grandpa wants Donald trump to be in office..."], ["tweet_5", "AuntRube: Marcus Gee Nails It II Why is Donald Trump so popular? Look no further than Rob Ford http://t.co/N6ZIx2na1x #GOP #cdnpoli #elxn42"], ["user_id", 1], ["created_at", "2015-09-23 21:45:02.650849"], ["updated_at", "2015-09-23 21:45:02.650849"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (2.2ms)
+  Rendered articles/index.html within layouts/application (5.7ms)
+Completed 200 OK in 892ms (Views: 66.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 17:45:06 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 17:45:31 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EM6JWUV2R14w3bM33lnIAXr6WnSo977NHarhEpgi46ZS/g2tD6SV8vn3bOZmXuJss5liqInNYPDBIW8W/3oRzA==", "article"=>{"title"=>"Movies"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Movies"], ["tweet_1", "brniesanders: RT @commonbandgirl: you know those people who aren’t obsessed with bands or music or books or movies or tv shows or anything how"], ["tweet_2", "janiemizell: RT @SincerelyTumblr: Halloween movies n chill"], ["tweet_3", "yabooncom: RT @CheapFilms2: 2 #movies with actor #LaneGarrison for buy online and download with #btc, #bitcoin http://t.co/KHoNJrKK9z"], ["tweet_4", "herzanney: RT @SincerelyTumblr: Halloween movies n chill"], ["tweet_5", "Ekene_ime: RT @FunnyPicsDepot: Nigerian Movies need to chill the Fuck...😂😂😂😂😂😂😂 http://t.co/SCGSqk0knD"], ["user_id", 1], ["created_at", "2015-09-23 21:45:32.348103"], ["updated_at", "2015-09-23 21:45:32.348103"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.7ms)
+  Rendered articles/index.html within layouts/application (4.8ms)
+Completed 200 OK in 985ms (Views: 47.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/articles" for ::1 at 2015-09-23 17:46:26 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.6ms)
+  Rendered articles/index.html within layouts/application (4.5ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for ::1 at 2015-09-23 17:46:50 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.5ms)
+  Rendered articles/index.html within layouts/application (6.1ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/articles.self-3da668091d648b1aec2769cd2c3d44c848488118f75271bb98473e7d12137785.css?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/users.self-57b64134fd6a90da2f73fdb434d86c2bf1d34c7cda373bde52b7ba6be49b0f58.css?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-23 17:46:50 -0400
+
+
+Started DELETE "/articles/71" for ::1 at 2015-09-23 17:48:13 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OWjwH3OuyV21LRv4NdapjBuGfaYL7RPzh1m+YXyOgkR7WHTrOXwb8XwHxCmN0YPh0uVFeirXzc5b0jBlG9ZwLg==", "id"=>"71"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 71]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 71]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.8ms)
+  Rendered articles/index.html within layouts/application (5.6ms)
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/articles/76" for ::1 at 2015-09-23 17:48:15 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E8/2gdbSOdB1e4mHKeSS6pTNXb4hKmI+6w2rhUNSNbJR/3J1nADrfLxRVlaR47iHXa5lYgAQvAM3hiWBJArH2A==", "id"=>"76"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 76]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 76]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.7ms)
+  Rendered articles/index.html within layouts/application (4.4ms)
+Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 17:48:27 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 17:49:19 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 17:49:22 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jqRaGYUhL0DVqpbZcRY8eBjwLo9gjxuKHL27EGnkwK3MlN7tz/P97ByASQjJERYV0ZMWU0G1xbfANjUUDrwyxw==", "article"=>{"title"=>"Migrants"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Migrants"], ["picture_url", "http://pbs.twimg.com/media/CPnd1U5UkAAc42v.jpg"], ["tweet_1", "KeithBe1: RT @BullshineBilly: Britain faces £150m bill from #EU to resettle migrants\nhttp://t.co/fPLxs96q70 http://t.co/QSzTVTLFYk"], ["tweet_2", "NKerrisonDavey: RT @BBCNews: Thursday's Daily Express: \"Economic migrants must be sent back\" http://t.co/TgRcLZI1vC (via @suttonnick) #TomorrowsPapersToday…"], ["tweet_3", "24365news_ita: #live #breakingnews #news\nBritain faces £150m bill from EU to resettle migrants - http://t.co/hpd0QVV4cj http://t.co/nEfmLmSbaz"], ["tweet_4", "575haiku: RT @PresenteOrg: .@pontifex calls for \"a change of attitude towards migrants\" for a more just world. #standwithfrancis http://t.co/JwUEUeaj…"], ["tweet_5", "nahid_vicky: RT @Nisha_Varia: #SDG8: Improving migrants' labor rights must go beyond counting deaths, ratifying treaties http://t.co/1EIEh43mAu http://t…"], ["user_id", 1], ["created_at", "2015-09-23 21:49:23.147543"], ["updated_at", "2015-09-23 21:49:23.147543"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.9ms)
+  Rendered articles/index.html within layouts/application (4.3ms)
+Completed 200 OK in 881ms (Views: 48.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 17:49:24 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 17:49:29 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BQ8rBgx7kvnJmSDsiLge3LEkphSrtPT5qSI4oFogKKxHP6/yRqlAVQCz/z0wvzSxeEeeyIqOKsR1qbakPXjaxg==", "article"=>{"title"=>"Cats"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["tweet_1", "ikissedgirIs: deviam banir do mundo os fentys que não gostam da katy e os cats que não gostam da rihanna"], ["tweet_2", "Publi_Cats: シルフのスキル1が350%だから十分強い(ﾉ)･ω･(ヾ)"], ["tweet_3", "ChrisJones28: RT @kittykaren: Not a single offer for this homeless cat-black cats and dogs always have a hard time when it comes to re-homing! http://t.c…"], ["tweet_4", "13lur_x: @korpikopan quand tu ecoutes tout l'album star dies nine cats apparait comme la + differente"], ["tweet_5", "BlogYourWorld: @wendyfitz9 It seems cats do have a liking for these spiders!"], ["user_id", 1], ["created_at", "2015-09-23 21:49:29.789243"], ["updated_at", "2015-09-23 21:49:29.789243"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.2ms)
+  Rendered articles/index.html within layouts/application (3.7ms)
+Completed 200 OK in 710ms (Views: 50.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 17:49:40 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 17:49:43 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+QMEpUxrnuTXIF0Whs32+HxQGQFTgK/OWXLw7QJDXNh1Ijm3+N811p2XqXiHB22KJJ4uCR03ILl7kXH01H/GQ==", "article"=>{"title"=>"Finance"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Finance"], ["picture_url", "http://pbs.twimg.com/media/CPnncNWXAAA50D7.jpg"], ["tweet_1", "mimibra4u: RT @thehill: The White House is preparing for a government shutdown: http://t.co/XKVW6R0YJ5 http://t.co/F4KzZhRb98"], ["tweet_2", "heibonntoreda: WSJ　金融・マーケット　http://t.co/HLLotSPPBf"], ["tweet_3", "UK_Credit_Card: Get 9.9% on Sainsbury's Bank Nectar Low Rate Credit Card; see website here http://t.co/QECCp8c70S #LowApr #CheapCredit"], ["tweet_4", "tmj_nyc_acct: If you're a #Accounting professional in #NEWYORK, NY, check out this #job: http://t.co/2SYzNRLvyp #Hiring #CareerArc"], ["tweet_5", "MortgageUpdated: RT @ApprovedMortgag: It takes patience and payments. 10 ways to raise your credit score: https://t.co/7pjQIuYVWL http://t.co/gkvkoQC2bI"], ["user_id", 1], ["created_at", "2015-09-23 21:49:44.085054"], ["updated_at", "2015-09-23 21:49:44.085054"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.9ms)
+  Rendered articles/index.html within layouts/application (4.7ms)
+Completed 200 OK in 578ms (Views: 57.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 17:51:20 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+QMEpUxrnuTXIF0Whs32+HxQGQFTgK/OWXLw7QJDXNh1Ijm3+N811p2XqXiHB22KJJ4uCR03ILl7kXH01H/GQ==", "article"=>{"title"=>"Finance"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Finance"], ["picture_url", "http://pbs.twimg.com/media/CPniMYHVEAA3lLw.jpg"], ["tweet_1", "antimattero: RT @TelegraphNews: Deflation supercycle is over as world runs out of workers http://t.co/d1b4MpyJMJ http://t.co/UTRoRlPyHg"], ["tweet_2", "tmj_lax_acct: Interested in a #Accounting #job near #Irvine, CA? This could be a great fit: http://t.co/2USUb2Z0J8 #Hiring #CareerArc"], ["tweet_3", "laurenattawia: RT @navkumar_: Your asshole of the week: http://t.co/fHjAduE6Y8"], ["tweet_4", "whyInvestigate: #Москве #russia Russia exhumes murdered tsar and wife: … , Anastasia, Tsarevich Alexei and Tatiana\n        Rus...  http://t.co/jufVFmVo2M"], ["tweet_5", "SashaBlo: \"Новая реальность\": Медведев рассказал россиянам о новой модели роста экономики и назвал… http://t.co/JNzaUTD8bC"], ["user_id", 1], ["created_at", "2015-09-23 21:51:21.179486"], ["updated_at", "2015-09-23 21:51:21.179486"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.6ms)
+  Rendered articles/index.html within layouts/application (4.0ms)
+Completed 200 OK in 579ms (Views: 54.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/articles.self-3da668091d648b1aec2769cd2c3d44c848488118f75271bb98473e7d12137785.css?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/users.self-57b64134fd6a90da2f73fdb434d86c2bf1d34c7cda373bde52b7ba6be49b0f58.css?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-23 17:51:21 -0400
+
+
+Started POST "/articles" for ::1 at 2015-09-23 17:51:29 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+QMEpUxrnuTXIF0Whs32+HxQGQFTgK/OWXLw7QJDXNh1Ijm3+N811p2XqXiHB22KJJ4uCR03ILl7kXH01H/GQ==", "article"=>{"title"=>"Finance"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Finance"], ["tweet_1", "GHerucokro: Aduh\"@FXS_Finance_MS: Jelang Subuh, Tawuran Pecah di Ciracas Jaktim #Kewangan https://t.co/XA6cFqpesz\""], ["tweet_2", "antimattero: RT @TelegraphNews: Deflation supercycle is over as world runs out of workers http://t.co/d1b4MpyJMJ http://t.co/UTRoRlPyHg"], ["tweet_3", "tmj_lax_acct: Interested in a #Accounting #job near #Irvine, CA? This could be a great fit: http://t.co/2USUb2Z0J8 #Hiring #CareerArc"], ["tweet_4", "laurenattawia: RT @navkumar_: Your asshole of the week: http://t.co/fHjAduE6Y8"], ["tweet_5", "whyInvestigate: #Москве #russia Russia exhumes murdered tsar and wife: … , Anastasia, Tsarevich Alexei and Tatiana\n        Rus...  http://t.co/jufVFmVo2M"], ["user_id", 1], ["created_at", "2015-09-23 21:51:30.333853"], ["updated_at", "2015-09-23 21:51:30.333853"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (2.7ms)
+  Rendered articles/index.html within layouts/application (6.4ms)
+Completed 200 OK in 596ms (Views: 57.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/articles.self-3da668091d648b1aec2769cd2c3d44c848488118f75271bb98473e7d12137785.css?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/users.self-57b64134fd6a90da2f73fdb434d86c2bf1d34c7cda373bde52b7ba6be49b0f58.css?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started GET "/assets/font3-05e88791a566027dd4981f2371e6e4ce4fccf87ddc38e6343ca6f0a59a9e2c5f.png" for ::1 at 2015-09-23 17:51:30 -0400
+
+
+Started DELETE "/articles/81" for ::1 at 2015-09-23 17:51:34 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5XpHC9TFsburxBnWiXrtR4w9DMD3f9lSDGYD0YVpC9CnSsP/nhdjF2LuxgcxfccqRV40HNZFB2/Q7Y3V4jH5ug==", "id"=>"81"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 81]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 81]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (2.7ms)
+  Rendered articles/index.html within layouts/application (5.3ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/articles/82" for ::1 at 2015-09-23 17:51:36 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zOehcD2y3glWNN04Xj3or7jWXHpHXDA7X0kdb6ZMWMGO1yWEd2AMpZ8eAunmOsLCcbVkpmZm7gaDwpNrwRSqqw==", "id"=>"82"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 82]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 82]]
+  [1m[35m (5.4ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.5ms)
+  Rendered articles/index.html within layouts/application (4.7ms)
+Completed 200 OK in 64ms (Views: 55.2ms | ActiveRecord: 6.3ms)
+
+
+Started DELETE "/articles/77" for ::1 at 2015-09-23 17:51:45 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ddk2lPjCsodFI6ti6HxRxpqqunmfgurpyHrbdnsPTS35+AuGTHYZtQ+UXwzptsq0wmSNcdE1ZZ7qmVpvrTPXg==", "id"=>"77"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 77]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 77]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.8ms)
+  Rendered articles/index.html within layouts/application (4.3ms)
+Completed 200 OK in 60ms (Views: 54.3ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/articles/79" for ::1 at 2015-09-23 18:00:05 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DfYNHhf7Taltc2sK9eoNSSxEirhIxed9tP5KRU3TuPxPxonqXSmfBaRZtNtN7Sck5SeyZGn/OUBodcRBKotKlg==", "id"=>"79"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 79]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 79]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.2ms)
+  Rendered articles/index.html within layouts/application (4.0ms)
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 18:00:07 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 18:00:10 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4zcEU6hpAr8ksQiYdr2mW7DXBf9YZHpELRB2DiqdZqihB4Cn4rvQE+2b10nOuow2ebQ9I3lepHnxm/gKTcWUwg==", "article"=>{"title"=>"Bitcoin"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Bitcoin"], ["tweet_1", "DigiEconomist: In short: most banks still have no clue about #Bitcoin or the #blockchain https://t.co/DPOWqApLzM"], ["tweet_2", "BuyBitcoinIndia: RT @Unocoin: Looking to buy your first bitcoin?  \nCheck out @Unocoin, India's leading bitcoin company."], ["tweet_3", "Yulija_Fox: #bitcoin  - decentralisation of financial services, #maidsafe  - d. of Internet, #ddp  - d. of parties, what's next? http://t.co/yGUlnyzK8n"], ["tweet_4", "AlgerGraff: обменник биткоин http://t.co/LOxPhYVpY1"], ["tweet_5", "dumitriu_gabi: @WIRED NASA’s Mining Pool Might Soon be a ‘Constellation of Satellites #nasa #blockchain #bitcoin #space http://t.co/9tUcljtqkM"], ["user_id", 1], ["created_at", "2015-09-23 22:00:11.068552"], ["updated_at", "2015-09-23 22:00:11.068552"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.2ms)
+  Rendered articles/index.html within layouts/application (3.7ms)
+Completed 200 OK in 618ms (Views: 57.6ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/articles/72" for ::1 at 2015-09-23 18:00:22 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rarzoWVnvnzzHBtQy9ROajUsADDRz5U0AjlJ3+fL84LvmndVL7Vs0Do2xIFz02QH/E847PD1SwnessfbgJMB6A==", "id"=>"72"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 72]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 72]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.8ms)
+  Rendered articles/index.html within layouts/application (4.8ms)
+Completed 200 OK in 54ms (Views: 47.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 18:00:25 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 18:00:30 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/4Ylf22lEdK/h8oiGgCvXdTABoyODH2Ltm/dyFMigvK9tqGLJ3fDfnatFfOiB4UwHaM+UK82o7Zq5FPMNHpwmA==", "article"=>{"title"=>"Pesto"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Pesto"], ["tweet_1", "LammaJoe: @nancypantss_ go lol try the chicken pesto, or the Rio grande those are some of the best ones haha"], ["tweet_2", "AS_FineFoodsNJ: Farfalle Pasta with homemade Basil Pesto, Toasted Pinoli Nuts, Sundried Tomatoes, Pecorino and… https://t.co/Lhig0CvHbh"], ["tweet_3", "di_pesto: RT @MisOdios: La llevan a inaugurar un hospital con los colores del PRO. La odian."], ["tweet_4", "k_macquarrie: for anyone curious about my mint recipes I made a variation on this: http://t.co/whjEtmgSuE which worked surprisingly well."], ["tweet_5", "FEDspecials: Greek Avocado Sandwich\nFresh Avocado, Kalamata Olives, Arugula, Roasted Red Pepper,\nRed Onion, White Cheddar, Walnut Basil Pesto Aioli"], ["user_id", 1], ["created_at", "2015-09-23 22:00:31.976042"], ["updated_at", "2015-09-23 22:00:31.976042"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.7ms)
+  Rendered articles/index.html within layouts/application (4.3ms)
+Completed 200 OK in 1263ms (Views: 56.2ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/articles/84" for ::1 at 2015-09-23 18:00:56 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UjwqyUqtX7FI9uLlLSN3vAcsX8KtWDPgNBTpb99oTaMQDK49AH+NHYHcPTSVJF3Rzk9nHoxi7d3on2druDC/yQ==", "id"=>"84"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 84]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 84]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.4ms)
+  Rendered articles/index.html within layouts/application (4.8ms)
+Completed 200 OK in 56ms (Views: 50.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/articles/new" for ::1 at 2015-09-23 18:01:02 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 18:01:05 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1Fp5h0hQCnQ41qZNWLtKFEJR94yMXmaX1sBcnwfTuAVYe0SV/OShRnJhUiNZcdFmGp/AhMLp6eD0I92G0e8ig==", "article"=>{"title"=>"Pope"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Pope"], ["tweet_1", "kingxmaraj: RT @LiLMock215: Pope Fucking Up My Weekend."], ["tweet_2", "nanzspazz: RT @TIME: Pope Francis brings excitement to D.C. streets http://t.co/utVBVla3qt"], ["tweet_3", "arawis: Fox Host Goes On Anti-Pope Tirade After White House Climate Remarks  https://t.co/EIs6AlFKyK via @sharethis"], ["tweet_4", "LeRoi_Jaycee: RT @Aruby_K: It's possible that they deliberately cast a man that looks like the Pope.  https://t.co/SK5J7OrqSz"], ["tweet_5", "Jowhera: RT @MJayRosenberg: Back to synagogue. Eating in 2 hours.\n\nDespite everything, this geezer is a real Jew!  One who loves the Pope!  And hate…"], ["user_id", 1], ["created_at", "2015-09-23 22:01:06.041520"], ["updated_at", "2015-09-23 22:01:06.041520"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.8ms)
+  Rendered articles/index.html within layouts/application (4.7ms)
+Completed 200 OK in 1073ms (Views: 54.3ms | ActiveRecord: 3.1ms)

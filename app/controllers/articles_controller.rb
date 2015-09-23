@@ -4,10 +4,6 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def edit
-    @articles = Article.where(user_id = current_user.id)
-  end 
-
   def create
     @article = Article.populate(article_params, current_user)
     @articles = Article.where(user_id = current_user.id)

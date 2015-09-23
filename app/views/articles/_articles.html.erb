@@ -1,0 +1,16 @@
+<div class="articleHolder">
+<%= @articles.map do |article|%>
+  <div class="child">
+    <p><h1><%= article.title.upcase%></h1></p>
+    <% if article.picture_url %>
+    <p><%= image_tag article.picture_url %></p>
+    <%end%>
+    <p><%= article.tweet_1 %></p>
+    <p><%= article.tweet_2 %></p>
+    <p><%= article.tweet_3 %></p>
+    <p><%= article.tweet_4 %></p>
+    <p><%= article.tweet_5 %></p>
+    <%= link_to("Delete section", article_path(article), :method => :delete)%><br />
+  </div>
+<%end%>
+</div>

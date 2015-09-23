@@ -6,7 +6,7 @@ belongs_to :user
     establish_client(current_user)
     @article = Article.new()
     results, media = [], []
-    @@client.search(article_params["title"], result_type: "popular").take(5).collect do |tweet|
+    @@client.search(article_params["title"], result_type: "recent").take(5).collect do |tweet|
         results.push(tweet)
       end
 

@@ -3,15 +3,12 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
   end
-
+  
   def create
     @article = Article.populate(article_params, current_user)
-    if @article
-      @articles = Article.all
-      render :index
-    else
-      render js: "alert('Article search did not go through');"
-    end
+    @articles = Article.where(user_id = current_user.id)
+    render :index
+
   end
 
   def index

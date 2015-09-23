@@ -5,12 +5,14 @@
 <%end%>
 <div class="headlineImage"><%= image_tag 'font3.png' %>
 </div>
-
+<%if @articles%>
 <div class="articleHolder">
 <%= @articles.map do |article|%>
   <div class="child">
     <p><h1><%= article.title%></h1></p>
+    <% if article.picture_url %>
     <p><%= image_tag article.picture_url %></p>
+    <%end%>
     <p><%= article.tweet_1 %></p>
     <p><%= article.tweet_2 %></p>
     <p><%= article.tweet_3 %></p>
@@ -20,3 +22,6 @@
   </div>
 <%end%>
 </div>
+<%else%>
+add some articles!
+<%end%>

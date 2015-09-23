@@ -7,7 +7,9 @@ class CreateArticles < ActiveRecord::Migration
       t.string :tweet_3
       t.string :tweet_4
       t.string :tweet_5
-#will add pic 
+      t.string :picture_url
+      t.belongs_to :user, index: true
+
       t.timestamps null: false
     end
   end

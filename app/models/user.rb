@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :articles 
   def self.find_or_create_from_auth_hash(auth_hash)
     user = where(provider: auth_hash[:provider], uid: auth_hash[:uid]).first_or_create
-    binding.pry
     user.update(
       name: auth_hash[:info][:name],
       profile_image: auth_hash[:info][:image],

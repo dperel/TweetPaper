@@ -30376,3 +30376,1185 @@ Processing by ArticlesController#destroy as HTML
   Rendered articles/_articles.html.erb (4.4ms)
   Rendered articles/index.html within layouts/application (8.7ms)
 Completed 200 OK in 64ms (Views: 57.2ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:05:34 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Cooking", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cooking"], ["picture_url", "/assets/smallbird.png"], ["tweet_1", "Avibess_: We cooking today 😌"], ["tweet_2", "Shelbyyleee94: RT @kierracannon: No joke I need to and really want to take cooking lessons"], ["tweet_3", "obeyyprecious: Cooking"], ["tweet_4", "jorich21: Mmm Italian chicken for tea, I'm getting more like Gordon Ramsay by the day! Swearing that is not the cooking!"], ["tweet_5", "snootful: RT @TrueBlueNectar: #Pineapple rings literally soaked in #tequila, you're going to eat a lot of these. http://t.co/AFwkipTzDs http://t.co/Z…"], ["user_id", 1], ["created_at", "2015-09-24 16:05:34.572437"], ["updated_at", "2015-09-24 16:05:34.572437"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.3ms)
+Completed 200 OK in 549ms (Views: 8.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:05:34 -0400
+
+
+Started GET "/" for ::1 at 2015-09-24 12:06:26 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:06:26 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-24 12:06:30 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=JhJIGwAAAAAAhra5AAABUAAbH10&oauth_verifier=BgvbQaPwTG3Ahzi9Sw2Ogo7eEwMRDAgy" for ::1 at 2015-09-24 12:06:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"JhJIGwAAAAAAhra5AAABUAAbH10", "oauth_verifier"=>"BgvbQaPwTG3Ahzi9Sw2Ogo7eEwMRDAgy", "provider"=>"twitter"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.3ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (6.2ms)
+  Rendered articles/index.html within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Asset names passed to helpers should not include the "/assets/" prefix. Instead of "/assets/smallbird.png", use "smallbird.png"):
+    3:     <div class="child">
+    4:       <p><h1><%= article.title.upcase%></h1></p>
+    5:         <%if article.picture_url %>
+    6:           <p><%= image_tag article.picture_url %></p>
+    7:         <%end%>
+    8:       <p><%= article.tweet_1 %></p>
+    9:       <p><%= article.tweet_2 %></p>
+  app/views/articles/_articles.html.erb:6:in `block in _app_views_articles__articles_html_erb___251590877303192143_70348512832820'
+  app/views/articles/_articles.html.erb:2:in `_app_views_articles__articles_html_erb___251590877303192143_70348512832820'
+  app/views/articles/index.html:13:in `_app_views_articles_index_html___2503079840564028181_70348574610420'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.8ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (118.3ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=JhJIGwAAAAAAhra5AAABUAAbH10&oauth_verifier=BgvbQaPwTG3Ahzi9Sw2Ogo7eEwMRDAgy" for ::1 at 2015-09-24 12:07:03 -0400
+
+OAuth::Unauthorized (401 Authorization Required):
+  oauth (0.4.7) lib/oauth/consumer.rb:216:in `token_request'
+  oauth (0.4.7) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  omniauth-oauth (1.1.0) lib/omniauth/strategies/oauth.rb:56:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.2ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.4ms)
+
+
+Started GET "/" for ::1 at 2015-09-24 12:07:07 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-24 12:07:07 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 128.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-24 12:07:08 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=-ksUlAAAAAAAhra5AAABUAAbsMc&oauth_verifier=hl2SFZ47CpEiL7swevKi4D8f0E82kSKf" for ::1 at 2015-09-24 12:07:09 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"-ksUlAAAAAAAhra5AAABUAAbsMc", "oauth_verifier"=>"hl2SFZ47CpEiL7swevKi4D8f0E82kSKf", "provider"=>"twitter"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (14.1ms)
+  Rendered articles/index.html within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (Asset names passed to helpers should not include the "/assets/" prefix. Instead of "/assets/smallbird.png", use "smallbird.png"):
+    3:     <div class="child">
+    4:       <p><h1><%= article.title.upcase%></h1></p>
+    5:         <%if article.picture_url %>
+    6:           <p><%= image_tag article.picture_url %></p>
+    7:         <%end%>
+    8:       <p><%= article.tweet_1 %></p>
+    9:       <p><%= article.tweet_2 %></p>
+  app/views/articles/_articles.html.erb:6:in `block in _app_views_articles__articles_html_erb___251590877303192143_70348512832820'
+  app/views/articles/_articles.html.erb:2:in `_app_views_articles__articles_html_erb___251590877303192143_70348512832820'
+  app/views/articles/index.html:13:in `_app_views_articles_index_html___2503079840564028181_70348574610420'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.8ms)
+
+
+Started GET "/articles" for ::1 at 2015-09-24 12:07:48 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (2.8ms)
+  Rendered articles/index.html within layouts/application (6.5ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:07:55 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"syria", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Syria"], ["picture_url", "http://pbs.twimg.com/media/CPrd_tSUAAAScEI.jpg"], ["tweet_1", "azulamar1: RT @Refugees: \"You can't live in Syria, war is everywhere...I hope my children find a dignified future in Europe.\" Ali w/ 3 kids http://t.c…"], ["tweet_2", "tn4venkat: RT @IranArabSpring: Join the #NewYorkRally and say #No2Rouhani in #NewYork \n28 Sep 2015 \nYes2Free #Iran &amp; #Syria\nhttp://t.co/ASa6LQL5fW! ht…"], ["tweet_3", "RevueLeBanquet: RT @NTenzer: \"War #Syria: cost of inaction\" Embrace #Assad would b not just morally wrong also strategic blunder http://t.co/NPpBnXp6nf via…"], ["tweet_4", "lefty_loons: when Russia start getting the upper hand in Syria , which they will, ISIS will flee in numbers to Europe , simply bringing the war with them"], ["tweet_5", "angel75103: RT @CNNPolitics: Obama and Russian President Vladimir Putin to meet at U.N. next week http://t.co/QGprAaBa0U via @Acosta http://t.co/UgXzZq…"], ["user_id", 1], ["created_at", "2015-09-24 16:07:56.963305"], ["updated_at", "2015-09-24 16:07:56.963305"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered articles/create.js.erb (0.2ms)
+Completed 200 OK in 1053ms (Views: 4.3ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/articles/216" for ::1 at 2015-09-24 12:08:00 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"naUXvfEHvavbNQUqW2DN1U8Pi9M0Mq+puL8XxyNLaELflZNJu9VvBxIf2vvjZ+e4hmyzDxUIcZRkNJnDRBOaKA==", "id"=>"216"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 216]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 216]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.4ms)
+  Rendered articles/index.html within layouts/application (6.0ms)
+Completed 200 OK in 54ms (Views: 46.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:08:07 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"documentation", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Documentation"], ["picture_url", "/smallbird.png"], ["tweet_1", "vannbansil: Papanoorin ko na talaga bukas yung The Longest Ride para sa documentation hahaa"], ["tweet_2", "AllPartyStarz: MPortraiture: Tonite on our booth.Many people visit us to get special promotion 4 their wedding day documentation.… http://t.co/KdWrvmCMu5"], ["tweet_3", "ZRJobs07: Advantage xPO is #hiring Senior Documentation Specialist in New York, NY http://t.co/2141UeKbkY #jobs #NewYork #Banking"], ["tweet_4", "nyumbanitv: UN-HABITAT Software Documentation Writer Job 2015 http://t.co/oZeqNSVFwG"], ["tweet_5", "wso2: Check out the WSO2 API Cloud #tutorial on adding API documentation to published APIs #WSO2 #Cloud #API http://t.co/OtHwDk8Zke"], ["user_id", 1], ["created_at", "2015-09-24 16:08:08.397066"], ["updated_at", "2015-09-24 16:08:08.397066"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.2ms)
+Completed 200 OK in 953ms (Views: 4.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/smallbird.png" for ::1 at 2015-09-24 12:08:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/smallbird.png"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/davidperel/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.1ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.0ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/davidperel/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.7ms)
+
+
+Started GET "/delete/219" for ::1 at 2015-09-24 12:08:53 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"219"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 219]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 219]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (2.3ms)
+  Rendered articles/index.html within layouts/application (6.1ms)
+Completed 200 OK in 66ms (Views: 45.5ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:08:57 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Documenatation", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Documenatation"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "No tweet :/"], ["user_id", 1], ["created_at", "2015-09-24 16:08:57.792559"], ["updated_at", "2015-09-24 16:08:57.792559"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered articles/create.js.erb (0.5ms)
+Completed 200 OK in 663ms (Views: 9.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/articles" for ::1 at 2015-09-24 12:09:42 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (6.2ms)
+  Rendered articles/index.html within layouts/application (9.9ms)
+Completed 200 OK in 57ms (Views: 47.6ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/articles/220" for ::1 at 2015-09-24 12:09:46 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z1vI4QyFQaldj/aFBHnK2Hkd7UhxwqHLuwMYEbhZl7ola0wVRleTBZSlKVS8fuC1sH7VlFD4f/ZniJYV3wFl0A==", "id"=>"220"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 220]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 220]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.5ms)
+  Rendered articles/index.html within layouts/application (6.0ms)
+Completed 200 OK in 60ms (Views: 53.3ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:09:51 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Documentation", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Documentation"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "mynameismuerte: The flow chart is a most thoroughly oversold piece of program documentation. ― Frederick Brooks, Jr., The Mythical Man Month"], ["tweet_2", "raviindra1918: #Career #opportunity for #Documentation Specialist I (15-03906) - Cambridge- MA# http://t.co/D7sdnVKhRq #ApTask.… http://t.co/rNJuacs8TY"], ["tweet_3", "NagiosRepDom: Tweak su desempeño en Nagios - http://t.co/9jmzGg9wmP"], ["tweet_4", "vannbansil: Papanoorin ko na talaga bukas yung The Longest Ride para sa documentation hahaa"], ["tweet_5", "AllPartyStarz: MPortraiture: Tonite on our booth.Many people visit us to get special promotion 4 their wedding day documentation.… http://t.co/KdWrvmCMu5"], ["user_id", 1], ["created_at", "2015-09-24 16:09:51.585853"], ["updated_at", "2015-09-24 16:09:51.585853"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.5ms)
+Completed 200 OK in 537ms (Views: 4.4ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/articles/214" for ::1 at 2015-09-24 12:09:59 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0fGkB4PDCSLtSYzi6J4QTnZ1BRPquA0VMl9dipeGknWTwSDzyRHbjiRjUzNQmTojvxY9z8uC0yju1NOO8N5gHw==", "id"=>"214"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 214]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 214]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.4ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.8ms)
+  Rendered articles/index.html within layouts/application (7.0ms)
+Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/articles/213" for ::1 at 2015-09-24 12:10:02 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qypbUi9Ubmx+8Jyf45/VzH0OLWINfyqr1ANVa0Ye4nXpGt+mZYa8wLfaQ05bmP+htG0VvixF9JYIiNtvIUYQHw==", "id"=>"213"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 213]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 213]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.8ms)
+  Rendered articles/index.html within layouts/application (5.2ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:10:04 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Home", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Home"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "ganeshan_iyer: @MahindraTUV300 Yoga classes &amp; didn't reach back home until 7:30 pm  . (she had forgotten her cell at home) . she tried contacting you (2/n)"], ["tweet_2", "NintendoNXES: RT @NintendoES: ¡A #ACHHD ya le han dado las notas! ¡Felicidades! http://t.co/bn8fn4b3oU http://t.co/5pu6RVG6IK"], ["tweet_3", "theorderoforteg: got home &amp; what was waiting for me this cool min form @maximusin3d that I won from a comparison &amp; love it :) http://t.co/MfGkzbsZ5L"], ["tweet_4", "esqsocial: NEW REFERRAL (CRIMINAL) - CLIENT SEEKING TO REGAIN MONEY TAKEN FROM HOME UPON ARREST OF A THIRD-PARTY.  ALBANY COUNTY, NEW YORK"], ["tweet_5", "wkytsports: UK Hoops TV selections, times complete for 2015-16 home schedule http://t.co/rpGSg0UoF3 http://t.co/eeayLBYxhY"], ["user_id", 1], ["created_at", "2015-09-24 16:10:05.235145"], ["updated_at", "2015-09-24 16:10:05.235145"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered articles/create.js.erb (0.2ms)
+Completed 200 OK in 561ms (Views: 3.8ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:10:08 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Garden", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Garden"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "Koshevnyk: garden collection © Perysty #18311920 - https://t.co/aFCD13qE1f"], ["tweet_2", "MsCarolineKarma: She who can turn her mind into a beautiful garden of colorful thoughts, is on the right path towards #happiness... 🙇 🌟 🙇 💖 🙇🌟👍"], ["tweet_3", "VillageGreenNJ1: Joanne Douds, South Orange Community Volunteer and Realtor, is Honored http://t.co/Amovo7MqDg via @villagegreennj1"], ["tweet_4", "syahmieleven: I'm at Taman Tasik Taiping (Lake Garden) in Taiping, Perak https://t.co/94CEznF8EN"], ["tweet_5", "Patio_Garden_: Grills Natural Gas : Lion Premium Grills L1634 Natural Gas Double Side Burner 26-3/4 by 20-1/2-Inch http://t.co/mvlvb9a0tj &lt;&lt;"], ["user_id", 1], ["created_at", "2015-09-24 16:10:09.753124"], ["updated_at", "2015-09-24 16:10:09.753124"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.3ms)
+Completed 200 OK in 1011ms (Views: 3.7ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/articles/221" for ::1 at 2015-09-24 12:10:12 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DpDB9s2G7kPJOGnBscRLPTBGaoF6+AD97dziqdi0/UlMoEUCh1Q87wASthAJw2FQ+SVSXVvC3sAxV2ytv+wPIw==", "id"=>"221"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 221]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 221]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.4ms)
+  Rendered articles/index.html within layouts/application (6.0ms)
+Completed 200 OK in 61ms (Views: 47.7ms | ActiveRecord: 10.1ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:10:19 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Animals", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Animals"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "rvrbrt1964: RT @jdtherainmaker: Plz Share    &lt;LOST &amp; FOUND ANIMALS &amp; PETS&gt;    Many Unclaimed   #valleyfirepets #ValleyFire   http://t.co/S3IBWrDZni htt…"], ["tweet_2", "StClementsTampa: Winston can't wait to check out all the vendors that will be at this year's Blessing of the Animals festival.... http://t.co/ADltVdaTsY"], ["tweet_3", "ShamaKaran: RT @officialdusyant: How can u celebrate and enjoy festival with oozing blood &amp; mutilated bodies of poor animals? I support #BloodLessEid h…"], ["tweet_4", "lyssiamacdonald: Fucking @iansomerhalder making me feel bad for all the animals. Damnit Ian now I have to save lives!"], ["tweet_5", "AliceSofy: Blackadder creator checks with UN over portraying them as animals in advert http://t.co/DH7oInUybh"], ["user_id", 1], ["created_at", "2015-09-24 16:10:19.776755"], ["updated_at", "2015-09-24 16:10:19.776755"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered articles/create.js.erb (0.2ms)
+Completed 200 OK in 749ms (Views: 3.8ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/articles/222" for ::1 at 2015-09-24 12:10:23 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+9KIxiS2XlRgYui32AELFfZq92ev+ZGmaQko14Mhz4254gwybmSM+KlIN2ZgBiF4PwnPu47DT5u1gqbT5Hk95w==", "id"=>"222"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 222]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 222]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.9ms)
+  Rendered articles/index.html within layouts/application (6.8ms)
+Completed 200 OK in 63ms (Views: 55.2ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/articles/223" for ::1 at 2015-09-24 12:10:29 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wn9WzrNlhjvW62TDtKkELpNBv+md4Llm8snlcmJxQFGAT9I6+bdUlx/BuxIMri5DWiKHNbzaZ1suQmt2BSmyOw==", "id"=>"223"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 223]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 223]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.3ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.2ms)
+  Rendered articles/index.html within layouts/application (6.8ms)
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:10:32 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Food", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Food"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "AudrieMorrow_: RT @brandy_ochoa: @AudrieMorrow_ he's gonna have all types of food since his birthday is on thanksgiving 😂 lucky baby.  I'm defiantly gonna…"], ["tweet_2", "Purewave7: RT @CatsProtection: Do your cats 'time share' resources (beds, food &amp; litter)? They may not be #FelineFriends: http://t.co/8qxY9S6F2W http:…"], ["tweet_3", "connie_fisk: RT @TamarHaspel: Why are canned and frozen always lumped together? Frozen fruit and veg should be a no-brainer yes in schools. http://t.co/…"], ["tweet_4", "CivicScience: #Organic food buyers are 36% more likely to actively (daily or weekly) use #Pinterest. http://t.co/jmQ3kt3w1b"], ["tweet_5", "streedie: I've harvested 836 of food!  http://t.co/fdqMzy7ISF #android, #androidgames, #gameinsight"], ["user_id", 1], ["created_at", "2015-09-24 16:10:33.594736"], ["updated_at", "2015-09-24 16:10:33.594736"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.3ms)
+Completed 200 OK in 1230ms (Views: 4.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2015-09-24 12:10:46 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:10:46 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-24 12:10:48 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=ecKNjwAAAAAAhra5AAABUAAfDiQ&oauth_verifier=NUXPZZm5RzeVj7YfLXfoEzVoAaxTGVsX" for ::1 at 2015-09-24 12:10:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"ecKNjwAAAAAAhra5AAABUAAfDiQ", "oauth_verifier"=>"NUXPZZm5RzeVj7YfLXfoEzVoAaxTGVsX", "provider"=>"twitter"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.4ms)
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (4.0ms)
+  Rendered articles/index.html within layouts/application (14.1ms)
+Completed 200 OK in 80ms (Views: 74.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-24 12:12:52 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:12:52 -0400
+
+
+Started GET "/" for ::1 at 2015-09-24 12:15:15 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 112ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-212c331688976b82635e86eaa6ca574687bf5173556413ed10ee02147c8cbf5e.css?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/users.self-57b64134fd6a90da2f73fdb434d86c2bf1d34c7cda373bde52b7ba6be49b0f58.css?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-24 12:15:15 -0400
+
+
+Started GET "/" for ::1 at 2015-09-24 12:16:08 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 69ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-f9fe9e0d17861526baec3e082c10b890324e4ece770d4e29682b1e9cb4fe23aa.css?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/users.self-57b64134fd6a90da2f73fdb434d86c2bf1d34c7cda373bde52b7ba6be49b0f58.css?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-24 12:16:09 -0400
+
+
+Started GET "/" for ::1 at 2015-09-24 12:16:48 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-38fbc81ccb92dbe015a1b0fb6d2aec419f26032ff2ff9228633e3b0bceedcf1c.css?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/users.self-57b64134fd6a90da2f73fdb434d86c2bf1d34c7cda373bde52b7ba6be49b0f58.css?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-24 12:16:48 -0400
+
+
+Started GET "/" for ::1 at 2015-09-24 12:17:37 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 125ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-38fbc81ccb92dbe015a1b0fb6d2aec419f26032ff2ff9228633e3b0bceedcf1c.css?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/users.self-b885a6d38fa9255bbc08ee33f25224bb63fc709fad56866daa1402940a87f9ba.css?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/assets/smallbird.jpg" for ::1 at 2015-09-24 12:17:37 -0400
+
+
+Started GET "/" for ::1 at 2015-09-24 12:18:30 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.self-38fbc81ccb92dbe015a1b0fb6d2aec419f26032ff2ff9228633e3b0bceedcf1c.css?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/users.self-57b64134fd6a90da2f73fdb434d86c2bf1d34c7cda373bde52b7ba6be49b0f58.css?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/sections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:18:30 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-24 12:18:32 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=0u0D9QAAAAAAhra5AAABUAAmIfc&oauth_verifier=NF6QOFTxyumNXY1YbdGPBbHfp5h3nORX" for ::1 at 2015-09-24 12:18:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"0u0D9QAAAAAAhra5AAABUAAmIfc", "oauth_verifier"=>"NF6QOFTxyumNXY1YbdGPBbHfp5h3nORX", "provider"=>"twitter"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.3ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (2.4ms)
+  Rendered articles/index.html within layouts/application (12.1ms)
+Completed 200 OK in 83ms (Views: 78.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-09-24 12:19:06 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:19:06 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-24 12:19:08 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=aYexOwAAAAAAhra5AAABUAAmsFY&oauth_verifier=61nrbSfjPTpcFzahB2qRqTLpwQopr3Pp" for ::1 at 2015-09-24 12:19:10 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"aYexOwAAAAAAhra5AAABUAAmsFY", "oauth_verifier"=>"61nrbSfjPTpcFzahB2qRqTLpwQopr3Pp", "provider"=>"twitter"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.1ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.9ms)
+  Rendered articles/index.html within layouts/application (6.1ms)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:19:19 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Cooking", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cooking"], ["picture_url", "http://pbs.twimg.com/media/CPrmYWwUAAAUnDq.jpg"], ["tweet_1", "recipeflow: How to Make Corned Beef Hash with Sunny Side Up Eggs - http://t.co/CKUmS96yez #cooking #recipes http://t.co/0W40StHRMC"], ["tweet_2", "EvaAngelin92: RT @cookovernewz: Lakeland Banquet's stuffed squash recipe - MyFox Detroit http://t.co/g4xNW0K1Xg http://t.co/pBx9SbvdxN"], ["tweet_3", "MiracleCuresYou: RT WeedFeed: Wifi Enabled #Cannabis Cooking? Yes, it's a thing! Its revolutionary for patient #caregivers -http://… http://t.co/hDBmvMrnH6"], ["tweet_4", "YunaLiu90: RT @cookovernewz: Lakeland Banquet's stuffed squash recipe - MyFox Detroit http://t.co/g4xNW0K1Xg http://t.co/pBx9SbvdxN"], ["tweet_5", "EmilyGreen360: RT @cookovernewz: Lakeland Banquet's stuffed squash recipe - MyFox Detroit http://t.co/g4xNW0K1Xg http://t.co/pBx9SbvdxN"], ["user_id", 1], ["created_at", "2015-09-24 16:19:20.122238"], ["updated_at", "2015-09-24 16:19:20.122238"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.3ms)
+Completed 200 OK in 746ms (Views: 8.4ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/articles/224" for ::1 at 2015-09-24 12:19:24 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lIP0ZjFzNmFm7TM0uMgYbsjd6e0BhDzjXHxp+224K4TWs3CSe6Hkza/H7OUAzzIDAb7RMSC+4t6A9+f/CuDZ7g==", "id"=>"224"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 224]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 224]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.4ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (2.3ms)
+  Rendered articles/index.html within layouts/application (9.6ms)
+Completed 200 OK in 66ms (Views: 60.4ms | ActiveRecord: 3.2ms)
+
+
+Started DELETE "/articles/215" for ::1 at 2015-09-24 12:19:30 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2z9rcVD//5e2YgUxkFHpkL0J5kKj64WLgRkfBlEharCZD++FGi0tO39I2uAoVsP9dGrenoLRW7ZdkpECNnmY2g==", "id"=>"215"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 215]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 215]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.3ms)
+  Rendered articles/index.html within layouts/application (5.9ms)
+Completed 200 OK in 64ms (Views: 56.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-09-24 12:20:35 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:20:35 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-24 12:20:37 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=AMgwuAAAAAAAhra5AAABUAAoCnU&oauth_verifier=WOlabfyupGSwveRhvJgzgdBRZV4xhzJd" for ::1 at 2015-09-24 12:20:38 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"AMgwuAAAAAAAhra5AAABUAAoCnU", "oauth_verifier"=>"WOlabfyupGSwveRhvJgzgdBRZV4xhzJd", "provider"=>"twitter"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.2ms)
+  Rendered articles/index.html within layouts/application (6.4ms)
+Completed 200 OK in 64ms (Views: 56.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:20:44 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Photography", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Photography"], ["picture_url", "http://pbs.twimg.com/media/CPrmtN8WwAAxbpa.jpg"], ["tweet_1", "iSandyFlorence: #Photography http://t.co/exp0EHGsVh God's kisses by Foto Bajki http://t.co/mFv5SmZBfS"], ["tweet_2", "YZlati: Amanecer en Cozumel #Island #Cozumel #landscapes #photography"], ["tweet_3", "iSandyFlorence: #Photography http://t.co/exp0EHGsVh duo in the shadow by PNMPHOTO http://t.co/3Zz7dWx4EF"], ["tweet_4", "suannelqr: RT @Cristina_Ripper: Ready for Photography process #largesize #art #drawings #ink#minimal #paper #abstract #inkart https://t.co/JQIOGGAkxe"], ["tweet_5", "AlexHiemstra: RT @Lovenature26: Green Leaves by Aimee L Maher Photography and Art http://t.co/tlf8EAh01x #nature  #artforsale #fineart http://t.co/moDXbY…"], ["user_id", 1], ["created_at", "2015-09-24 16:20:45.064734"], ["updated_at", "2015-09-24 16:20:45.064734"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.3ms)
+Completed 200 OK in 541ms (Views: 4.2ms | ActiveRecord: 3.2ms)
+
+
+Started DELETE "/articles/225" for ::1 at 2015-09-24 12:20:51 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hcXYWa8bHXR6pWc0r6PWQvSNfUGTNXULJgT+sFLmg4jH9Vyt5cnP2LOPuOUXpPwvPe5FnbIPqzb6j3C0Nb5x4g==", "id"=>"225"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 225]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 225]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.3ms)
+  Rendered articles/index.html within layouts/application (7.1ms)
+Completed 200 OK in 67ms (Views: 61.6ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:20:57 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"USA", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Usa"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "marac00per: RT @brownjenjen: Pope Elevates Jun&amp;Atilde;&amp;shy;pero Serra to Sainthood to the Frustration of Some http://t.co/fX0SZywZQd"], ["tweet_2", "amssvs: A #Smallbiz FYI in #Salem Ma, let your customers know about this survey http://t.co/xhNezXRtuz @derbyjoesalem @EngineHouse @FlyingSaucerMa"], ["tweet_3", "CelineDionFans2: Duets by Barbra Streisand (#CD, Nov-2002, Sony Music Distribution (USA)) http://t.co/2fJxdHABxX #Entertainment #Buzz http://t.co/sC074DcEkT"], ["tweet_4", "jobs_bacau: Jobs in the USA Daily is out! http://t.co/lrsZTSz7Dm Stories via @GECareers"], ["tweet_5", "usarelatednews: Related News: Our Neurodiverse World -Slate- http://t.co/aKRiMBQoBw"], ["user_id", 1], ["created_at", "2015-09-24 16:20:58.233243"], ["updated_at", "2015-09-24 16:20:58.233243"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered articles/create.js.erb (0.2ms)
+Completed 200 OK in 680ms (Views: 4.8ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/articles/227" for ::1 at 2015-09-24 12:21:06 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cfAHPuW5Fxb+R0KWycxABhaDqfPmoTudKe4YaUbY2C8zwIPKr2vFujdtnUdxy2pr3+CRL8eb5aD1ZZZtIYAqRQ==", "id"=>"227"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 227]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 227]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (2.1ms)
+  Rendered articles/index.html within layouts/application (6.1ms)
+Completed 200 OK in 66ms (Views: 57.1ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:21:10 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Pope in US", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Pope in us"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "sapphiremounty: Watch Live as Pope Francis Meets With the Homeless in Washington, D.C. http://t.co/OORmwrPWu9 @TIME"], ["tweet_2", "GarnetLynne: Pope urges 'humane' USmigrantresponse http://t.co/zVyWfheJbG take them in bitch! Pope got more money than god! we have homeless to tend too!"], ["tweet_3", "ftsnnewsdeskm: Pope urges US Congress to embrace migrants http://t.co/cHDLAENu67"], ["tweet_4", "mjcnlcc2: RT @FoxNews: Pope Francis tells Congress that the Golden Rule \"points us in a clear direction.\" http://t.co/7halgqinLQ #PopeInUS http://t.c…"], ["tweet_5", "Sunshyne501: It takes the Pope to visit US of A for many to attend, understand , agree &amp;have compassion for the homeless in our nation ( country)."], ["user_id", 1], ["created_at", "2015-09-24 16:21:11.905367"], ["updated_at", "2015-09-24 16:21:11.905367"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.3ms)
+Completed 200 OK in 966ms (Views: 4.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/refresh" for ::1 at 2015-09-24 12:21:20 -0400
+Processing by ArticlesController#refresh as HTML
+  Parameters: {"authenticity_token"=>"1bL1o6SgFc/y/tspPE1EQuMSfVI0qhXNLTHTYIxlY9CXgnFX7nLHYzvUBPiESm4vKnFFjhWQy/Dxul1k6z2Rug=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Syria"], ["picture_url", "http://pbs.twimg.com/media/CPqqtRAUwAAPJIS.jpg"], ["tweet_1", "vermiciouskid: RT @Feeney4Batman: #Syria: #ISIS mobilising fighters &amp; heavy weapons for push on #SyrianArabArmy in #DeirEzzor http://t.co/Re3Mp8DCNk http:…"], ["tweet_2", "astro_puppy: Obama is often accused of leading by following. Netanyahu met w/ Putin over Syria situation, so now it's Obama's turn http://t.co/JbaBUm2yNw"], ["tweet_3", "ABOUHAMZA2019: RT @MiddleEastEye: 'One of Syria's bravest cartoonists' tortured to death in prison http://t.co/gDGWSyO6U0 http://t.co/cFGinJw6Dy"], ["tweet_4", "PB_Prathamesh_B: Most CIA-backed rebels in Syria ‘anti-American, anti-Western and anti-democracy’ (Op-Edge) http://t.co/pr9PulcSxk http://t.co/ekqtdVVaqo"], ["tweet_5", "yskMiami: Untangling Syria: Europe’s top diplomats mull new strategy http://t.co/JwFGld77vg"], ["user_id", 1], ["created_at", "2015-09-24 16:21:21.332586"], ["updated_at", "2015-09-24 16:21:21.332586"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 218]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cooking"], ["picture_url", "http://pbs.twimg.com/media/CO6DDz-UsAAnG9K.jpg"], ["tweet_1", "bLOLLY: RT @youyukb: cooking time http://t.co/lYPgs48HfM"], ["tweet_2", "sibjubeslia1971: How Oscar Meyer is Cooking Up Customer Connections http://t.co/BnrFgcT3yg http://t.co/3126Tyj8S9"], ["tweet_3", "Frank_AV_design: Digital Signage: Cooking up revenue for restaurants http://t.co/JwP3qdKbDW"], ["tweet_4", "LurkingQueen: RT @ItsJohnnyCyrus: @KylieJenner You should put a cooking video up 😏"], ["tweet_5", "Uriah_95: I hate cooking , shit take too long ..ion wanna look at food until it's ready to eat"], ["user_id", 1], ["created_at", "2015-09-24 16:21:21.858146"], ["updated_at", "2015-09-24 16:21:21.858146"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 226]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Usa"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "Joselynp_: RT @CristianNEON: Los \"No\" de Dios también son un regalo. \nEs la manera que él usa para protegernos de lo que no podemos ver."], ["tweet_2", "HuntsmanEdDept: RT @oceanexplorer: Meet the deepwater hermit crab, who uses an anemone as a shell: http://t.co/zGFVXBXrqg #Okeanos http://t.co/88W6CqdwOh"], ["tweet_3", "WhoAteTheSquid: USA's \"shoot first\" policy is deplorable... unless it refers to acceptable action taken against people who use leaf blowers or car alarms."], ["tweet_4", "yonekiwiz: @usa_0x0_asuasu トイレに行く振りしてお会計しちゃうスマートなおっさんになるね(っ՞ةڼ◔c)"], ["tweet_5", "usarelatednews: Related News: New York&amp;#39;s Madison Square Garden host to the sacred as well as sports -USA TODAY- http://t.co/AP1zlUgfgu"], ["user_id", 1], ["created_at", "2015-09-24 16:21:22.502367"], ["updated_at", "2015-09-24 16:21:22.502367"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 228]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Pope in us"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "veotag_IP4U: Watch Live as Pope Francis Meets With the Homeless in Washington, D.C. http://t.co/nQtgtUk9er @TIME"], ["tweet_2", "ALDUB_APARRI: RT @AngPoetNyo: Today is historic. For the first time, A Pope speaks in the US Congress. And also for the first time Yaya Dub speaks!#ALDUB…"], ["tweet_3", "mgowaski: RT @BostonGlobe: Pope: \"The answer, as we all know, is simply for money: money that is drenched in blood, often innocent blood.\" http://t.c…"], ["tweet_4", "VirginiaInCal: RT @BernieSanders: The pope is right in saying all of us must address the grotesque income and wealth inequality we are seeing throughout t…"], ["tweet_5", "sapphiremounty: Watch Live as Pope Francis Meets With the Homeless in Washington, D.C. http://t.co/OORmwrPWu9 @TIME"], ["user_id", 1], ["created_at", "2015-09-24 16:21:23.064919"], ["updated_at", "2015-09-24 16:21:23.064919"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 229]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.6ms)
+  Rendered articles/index.html within layouts/application (5.8ms)
+Completed 200 OK in 2585ms (Views: 62.4ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/" for ::1 at 2015-09-24 12:23:54 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-24 12:23:54 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-24 12:23:57 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=68pJdQAAAAAAhra5AAABUAArFKg&oauth_verifier=qvzB5cl16VByNnMyNekO7DMfxSptOTNB" for ::1 at 2015-09-24 12:23:58 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"68pJdQAAAAAAhra5AAABUAArFKg", "oauth_verifier"=>"qvzB5cl16VByNnMyNekO7DMfxSptOTNB", "provider"=>"twitter"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (0.5ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.4ms)
+  Rendered articles/index.html within layouts/application (7.1ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:24:08 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Photography", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Photography"], ["picture_url", "http://pbs.twimg.com/media/CPrnHw7XAAAh9ek.jpg"], ["tweet_1", "tootoked: RT @Photo_az: #city #architecture #popular #photography #photo #FF #image #instagram #500px http://t.co/yidV2vJPIY"], ["tweet_2", "7thbali: I just submitted an image to @Pixoto. Check it out at http://t.co/srwKkKKcWY"], ["tweet_3", "Maika_Tremblay: RT @Trip__Tour: TRIP &amp; TOUR http://t.co/up2REsb2BQ #Trip #Tour #Travel #IncredibleIndia #Nature #Landscape #Photography #India"], ["tweet_4", "rawculture: I'm not doing music videos for a while, but if anyone wants some photography done, just let me know!"], ["tweet_5", "MartaViver: RT @Britanniacomms: That Friday Feeling.. http://t.co/eXPNyprBF5 c @AyhanKomurcu #nature #photography"], ["user_id", 1], ["created_at", "2015-09-24 16:24:08.797495"], ["updated_at", "2015-09-24 16:24:08.797495"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered articles/create.js.erb (0.4ms)
+Completed 200 OK in 506ms (Views: 5.3ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/articles/232" for ::1 at 2015-09-24 12:24:14 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zBK3vKuccOvOlqpvyf64d2epoA4mD8c/GCjSVV8o37WOIjNI4U6iRwe8db5x+ZIarsqY0gc1GQLEo1xROHAt3w==", "id"=>"232"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 232]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 232]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.4ms)
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (2.8ms)
+  Rendered articles/index.html within layouts/application (8.4ms)
+Completed 200 OK in 73ms (Views: 65.3ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/articles/233" for ::1 at 2015-09-24 12:24:16 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xuJ0yh3GvklmlQe2vdM9dGPblZ8P8ymZG4mzDTmWbCOE0vA+VxRs5a+/2GcF1BcZqritQy7J96THAj0JXs6eSQ==", "id"=>"233"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 233]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 233]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.2ms)
+  Rendered articles/index.html within layouts/application (6.5ms)
+Completed 200 OK in 72ms (Views: 64.1ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:24:20 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Europe", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Europe"], ["picture_url", "http://pbs.twimg.com/media/CPrnhLvWEAAZ5xH.jpg"], ["tweet_1", "peetersfrank2: #France not \"sick man of Europe\"; merely arriving late to the party (bron:Oxford Economics) Weldra Duitsland? http://t.co/b67FqW7T7c"], ["tweet_2", "victorien_m: musha_suisse \"The #SuperTrofeo Europe has a champion: Patrick Kujala\nMore on http://t.co/O3AogVssFr thesupertrof… https://t.co/XAiE6Be1KX\""], ["tweet_3", "victorien_m: musha_suisse \"The #SuperTrofeo Europe has a champion: Patrick Kujala\nMore on http://t.co/O3AogVssFr thesupertrof… https://t.co/QRlCzMkZu1\""], ["tweet_4", "Wynand13Mulder: RT @cnni: Merkel: Refugees welcome, but need to assimilate http://t.co/KwHUhX0YXH http://t.co/KSFyvh9HxX"], ["tweet_5", "ohmyeverdeen: RT @SelenaReporter: PHOTO: Having the best trip. Europe I just love you.. 🙈☺️ (Selena via Instagram) http://t.co/m5ds6VPt2X"], ["user_id", 1], ["created_at", "2015-09-24 16:24:21.563948"], ["updated_at", "2015-09-24 16:24:21.563948"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered articles/create.js.erb (0.2ms)
+Completed 200 OK in 920ms (Views: 3.9ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-24 12:24:25 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"Asia", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, commit
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Asia"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "internoir_md: Best Okonomiyaki!! @ AEON Mall Bsd City BIG mall in asia https://t.co/maPblpWlbe"], ["tweet_2", "haristein: Talking of the entire South Asia RT'ing my tweet, let's pray everyone is safe after the earthquake in indonesia."], ["tweet_3", "zaghal_: RT @FIBA: 6 players have scored 11pts or more in Jordan's first #FIBAAsia2015 win!\n\n#JORSIN boxscore: http://t.co/8LzjiZRleo http://t.co/R3…"], ["tweet_4", "MalikHinna: RT @ARYNEWSOFFICIAL: At least 717 dead, over 800 injured in #Hajjstampede\n#MinaStampede #Hajj2015 \n\nRead more: http://t.co/yrAAphfxPv http:…"], ["tweet_5", "jayiyambo: RT @ngurare: Japan is the Namibia of Asia that defeated South Africa; today we are ready to defeat New Zealand😀😀😀"], ["user_id", 1], ["created_at", "2015-09-24 16:24:26.095431"], ["updated_at", "2015-09-24 16:24:26.095431"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+  Rendered articles/create.js.erb (0.2ms)
+Completed 200 OK in 1066ms (Views: 5.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/refresh" for ::1 at 2015-09-24 12:24:34 -0400
+Processing by ArticlesController#refresh as HTML
+  Parameters: {"authenticity_token"=>"ATVPmcbPkWkxDkhLTDiV/BP9wJsuTAZhpQBBEGlxjotDBcttjB1Dxfgkl5r0P7+R2p74Rw922Fx5i88UDil84Q=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Syria"], ["picture_url", "http://pbs.twimg.com/media/CPq-ug5WIAA7rwQ.jpg"], ["tweet_1", "waleedbhj: RT @Free_Media_Hub: Support us links http://t.co/SJuQY1joPD  http://t.co/prCI76hOwu  and Face book @  http://t.co/tlCTcdTgpx … go explore h…"], ["tweet_2", "strawberreli: RT @snhr: #Syria\n#SNHR: 6 victims including 3 children died in gov warplanes missiles fired on Kafrooma in Idlib, Sep 24"], ["tweet_3", "shahmiffahwoii: RT @Qasswaa: Tak tahu nak gambar macam mana sedihnya aku rasa tengok gambar ayah dengan anak pelarian Syria.. http://t.co/F7HYOtpGl9"], ["tweet_4", "5778f99f242742b: @wasem_asd @falcon_syria http://t.co/0LnW3lz6Sk"], ["tweet_5", "wasem_asd: RT @lovisr60: @Samarkhalaf8 @falcon_syria @mnmn1979mn1979 @wasem_asd @vptr44 @adbal6fat @kokkqwerty @W8w51Py8qCt7c5z @gcvcccccccgg http://t…"], ["user_id", 1], ["created_at", "2015-09-24 16:24:35.120760"], ["updated_at", "2015-09-24 16:24:35.120760"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 230]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Cooking"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "edm_canada: @flumemusic What are you up to dude? It's been quiet from your end in a while. Cooking up an album?"], ["tweet_2", "mandy_keene: Maama cooking for me😋"], ["tweet_3", "gabriela_motroc: RT @adriangranzella: \"The secret to a great magazine? 'The more stubborn the editors, the better it is,'\" -- @cpkimball, @TestKitchen http:…"], ["tweet_4", "imarkwright: Need to rework some social networking strategies. @IFTTT cooking this weekend."], ["tweet_5", "nell_mama: I'm gonna start cooking this for my man lol https://t.co/xzO7jCAM5s"], ["user_id", 1], ["created_at", "2015-09-24 16:24:35.704364"], ["updated_at", "2015-09-24 16:24:35.704364"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 231]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Photography"], ["picture_url", "http://pbs.twimg.com/media/CPrRjmeUsAE4iDl.jpg"], ["tweet_1", "Quntone_5243: RT @h_m_1028: この時間を 大切に。\nこの瞬間を 形に。\n\n#カップルでphotographer\n#photography\n#ファインダー越しの私の世界 http://t.co/iz1eMgTrVQ"], ["tweet_2", "danialralph: Check out my bro work Photographer: tapsmoments\n#tapsmoments #tapsgirl #tapsworld #photography #art… https://t.co/QCDRxipGeR"], ["tweet_3", "AuthorBeeFavs: RT @ClickFiction: Our newest print! Let us know your thoughts :) #quote #micropoetry #photography #art #walldecor http://t.co/eG1e23uhbn"], ["tweet_4", "itsssnats: PHOTOGRAPHY: LITTLE SHOOT https://t.co/HcXODiSlny on @bloglovin"], ["tweet_5", "Emily_Whicker: My photography group is cute!📷💕 https://t.co/SnGW1dgaB1"], ["user_id", 1], ["created_at", "2015-09-24 16:24:36.347577"], ["updated_at", "2015-09-24 16:24:36.347577"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 234]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Europe"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "Catoudi: RT @Wks_69: La France va débloquer 100 millions d'euros d'aides pour les réfugiés...des Millions comme si il en pleuvait ! http://t.co/SZmB…"], ["tweet_2", "chasesfeed: White House to Announce That Obama and Putin Will Meet: The White House plans to announ... http://t.co/Zl5Hw3tJao http://t.co/pm97olizVH"], ["tweet_3", "Evaldas0525: RT @Telegraph: Monaco Yacht Show: super gadgets for super yachts http://t.co/RuTUEiEkVx http://t.co/xETuInX9t8"], ["tweet_4", "takinyera: RT @cnni: Merkel: Refugees welcome, but need to assimilate http://t.co/KwHUhX0YXH http://t.co/KSFyvh9HxX"], ["tweet_5", "deannanaj: RT @washingtonpost: How VW’s scandal threatens the reputation of \"German engineering\" http://t.co/iV4h0oCzDt"], ["user_id", 1], ["created_at", "2015-09-24 16:24:37.117539"], ["updated_at", "2015-09-24 16:24:37.117539"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 235]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Asia"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "Vika_Fellycious: RT @7essycaAuryn: See you 2morro world!　\nまった あした (*^^)v @ AFA ( Anime Festival Asia) JHCC https://t.co/Z83QV7odqE"], ["tweet_2", "omoroiyo777: お弁当作り、食中毒予防のコツは？\nhttp://t.co/NzFKTeDcm5"], ["tweet_3", "hondaooyuz: Asia stocks lackluster as Japan falls, Fed speech awaited.. Related Articles: http://t.co/uWqnlb1Csa"], ["tweet_4", "EdmundRessler: Extremists in Bangladesh publish global hit list of bloggers and writers @CNNI http://t.co/rWMNH0xFMS"], ["tweet_5", "zaghal_: RT @FIBA: 2-0 record now for Palestine at the #FIBAAsia2015! \n\n#PLEKUW boxscore: http://t.co/pwXI5SoP1Q http://t.co/NQVg3qmVjE"], ["user_id", 1], ["created_at", "2015-09-24 16:24:37.688501"], ["updated_at", "2015-09-24 16:24:37.688501"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 236]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  Rendered articles/_form.html.erb (0.3ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.4ms)
+  Rendered articles/index.html within layouts/application (5.4ms)
+Completed 200 OK in 3214ms (Views: 42.2ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/refresh" for ::1 at 2015-09-24 12:24:42 -0400
+Processing by ArticlesController#refresh as HTML
+  Parameters: {"authenticity_token"=>"76X3x3NTnSc3eHoc9H3ahyw3yZySoJp1l/V7QwuSuvWtlXMzOYFPi/5Spc1MevDq5VTxQLOaREhLfvVHbMpInw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Syria"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "vagelisvagelis2: Η Συρία παρέλαβε νέα μαχητικά από Ρωσία και με αυτά βομβαρδίζει τους τζιχαντιστές http://t.co/7muqhcoOt6"], ["tweet_2", "SyriaTweetEn: RT @Dr_mz13: Regime airstrikes on Talbiseh #Homs on Eid http://t.co/2vAbUHbk40 #Syria http://t.co/2K503xXrKT"], ["tweet_3", "FinancieraFP: #Finance Chinese Military Personnel, \"Aerial Assets\" Allegedly En Route To Syria -&gt; davidjcc_zgz -&gt; … http://t.co/b5sKz2b3Ny"], ["tweet_4", "JonathanLanday: Sr admin official: Obama to meet Putin at UNGA. \"Despite profound differences\" Obama \"believes it would b irresponsible\" not to talk. #Syria"], ["tweet_5", "ElaheRameyani: RT @mohamma65067664: Gulf Arabs still bent on Assad ouster, oppose Russia role in Syria http://t.co/NRqLrUPcYI #BBC #politics"], ["user_id", 1], ["created_at", "2015-09-24 16:24:43.630255"], ["updated_at", "2015-09-24 16:24:43.630255"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 237]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cooking"], ["picture_url", "http://pbs.twimg.com/media/CPrPCGwWIAABzic.jpg"], ["tweet_1", "Hcs_Ricketts: RT @HCS_Godfrey: Great day at Hobart HQ with some of the UK consultants cooking with @hcs_crump &amp; our new Bonnet Compact Kitchen range http…"], ["tweet_2", "nolacampanella: \"No secret or phony cooking recipes.\" http://t.co/PBeeliO4gw"], ["tweet_3", "ebbyrane: RT @sanfranmag: At the redesigned French Laundry, cooking is performance art: http://t.co/nBxz6bETiG @snohetta @envelopead http://t.co/KoYo…"], ["tweet_4", "edm_canada: @flumemusic What are you up to dude? It's been quiet from your end in a while. Cooking up an album?"], ["tweet_5", "mandy_keene: Maama cooking for me😋"], ["user_id", 1], ["created_at", "2015-09-24 16:24:44.226299"], ["updated_at", "2015-09-24 16:24:44.226299"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 238]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Photography"], ["picture_url", "http://pbs.twimg.com/media/CPrmrgSWoAAw0FO.jpg"], ["tweet_1", "camethedawnxp: RT @AuthorAkansha: Sunrise Pool by Michael Böhmländer #Landscapes #Photography #Nature #Travel http://t.co/J8E1e1GBTp"], ["tweet_2", "Luthfisobana: When you are young.\nwork to learn.. \nnot to earn..\n\n.\n\n.\n\n.\n\n#Photography #Sunrise… https://t.co/2WCXznSmZb"], ["tweet_3", "LightAndTimeArt: ❋♦ #ThrowbackSyle #barware gifts for the #vintage photography lover   http://t.co/FSktgKBeBY http://t.co/30hSWZVfei"], ["tweet_4", "BusyMommaJ: Some of the MAGIC from Azar Photography at @meganrose0933 and @nsmeeding's wedding! #LoveatfirstSmeeding http://t.co/a7mV349TXW"], ["tweet_5", "societemember: New editions floating around my walls #art #photography #julianmarshall https://t.co/5AwGIZpcY7"], ["user_id", 1], ["created_at", "2015-09-24 16:24:44.781166"], ["updated_at", "2015-09-24 16:24:44.781166"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 239]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Europe"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "News_on_world: White House to Announce That Obama and Putin Will Meet: The White House plans to announce the m... http://t.co/CsFFNmNEi8 #News_on_World"], ["tweet_2", "MJkatzTheWriter: The3StagesOfJihad&amp;TheSyrian Islamic\"Humanitarian\"InvasionOf Christian Europe&amp;America: http://t.co/68CcoVxLrk via @httpstwittercomRickRWells"], ["tweet_3", "HentonDave: RT @Lamborghini: The #SuperTrofeo Europe has a champion: Patrick Kujala\nMore on http://t.co/dX6Sbnpokj @thesupertrofeo @nuerburgring\nhttps:…"], ["tweet_4", "Eagleeye47: RT @historyfacts247: On 24 Sep 1957, Camp Nou, the largest stadium in Europe (99,354), was opened in Barcelona. #OTD http://t.co/P0ueHcefTO"], ["tweet_5", "RealTimeHack: Lack of EU migrant strategy reignites Serbia-Croatia tensions http://t.co/CWYynu16kl #EMM"], ["user_id", 1], ["created_at", "2015-09-24 16:24:45.671670"], ["updated_at", "2015-09-24 16:24:45.671670"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 240]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Asia"], ["picture_url", "http://www.tbp.org/Images/Logos/twitter-bird-blue-on-whiteSMALL.png"], ["tweet_1", "GlobltrvlReport: Tom Kerridge's Singapore: 'Dining is the country's national pastime': The chef and television presente... http://t.co/vrJTfiXxKL #travel"], ["tweet_2", "vicanbi: Tom Kerridge's Singapore: 'Dining is the country's national pastime': The chef and television presenter reveal... http://t.co/52WqSWBPsw"], ["tweet_3", "ShortTermRental: Tom Kerridge's Singapore: 'Dining is the country's national pastime' http://t.co/uZrfTUHAXO"], ["tweet_4", "maudoodbhatti: RT @humanityfirstuk: HF supports #GlobalGoals on #education and has already built 16 #schools in Africa, Asia and Central America http://t.…"], ["tweet_5", "BlueSonicStreak: @AngelEvaSlayer If that happens, Western culture will disappear, and the Third World will encompass the planet (except maybe East Asia)."], ["user_id", 1], ["created_at", "2015-09-24 16:24:46.258372"], ["updated_at", "2015-09-24 16:24:46.258372"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 241]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  Rendered articles/_form.html.erb (0.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.3ms)
+  Rendered articles/index.html within layouts/application (6.0ms)
+Completed 200 OK in 3808ms (Views: 40.4ms | ActiveRecord: 32.9ms)

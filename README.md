@@ -2,6 +2,9 @@
 
 TweetPaper is a side project app that I built in about a day and a half using Ruby on Rails, AJAX, and some basic CSS to give a newspaper-y look to Twitter.
 
+**Video demo of AJAXified app: https://vimeo.com/140327439**
+
+Video demo of earlier version, pre-AJAX: https://vimeo.com/140255173
 
 To run: Clone the repo, run 'bundle install' in terminal. You will need to add the following to your application.yml file. All tokens can be obtained from dev.twitter.com.
 <pre><code>

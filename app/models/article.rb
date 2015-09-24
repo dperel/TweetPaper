@@ -5,7 +5,7 @@ belongs_to :user
   def self.populate(article_params, current_user)
     establish_client(current_user)
     @article = Article.new()
-    results, media = [], []
+    results = []
     @@client.search(article_params["title"], result_type: "recent").take(5).collect do |tweet|
         results.push(tweet)
       end

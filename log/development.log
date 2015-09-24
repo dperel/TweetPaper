@@ -23336,3 +23336,169 @@ Processing by ArticlesController#refresh as HTML
   Rendered articles/_articles.html.erb (1.4ms)
   Rendered articles/index.html within layouts/application (3.8ms)
 Completed 200 OK in 3732ms (Views: 66.3ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/" for ::1 at 2015-09-23 20:57:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 237ms (Views: 224.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-23 20:57:50 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-23 20:57:51 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-09-23 20:57:53 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=W_eumQAAAAAAhra5AAABT_zbSjU&oauth_verifier=Vnq4x6GDzYmbRF8CLd5PVtvqLo8oTBrw" for ::1 at 2015-09-23 20:57:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"W_eumQAAAAAAhra5AAABT_zbSjU", "oauth_verifier"=>"Vnq4x6GDzYmbRF8CLd5PVtvqLo8oTBrw", "provider"=>"twitter"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "twitter"], ["uid", "3241893952"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (11.4ms)
+  Rendered articles/index.html within layouts/application (28.1ms)
+Completed 200 OK in 179ms (Views: 89.2ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/articles/114" for ::1 at 2015-09-23 20:58:04 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0FGYeuewMWTXzU2UWnzhO+h3x3xdodPHBF4vWoC1tkiSYRyOrWLjyB7nkkXie8tWIRT/oHybDfrY1aFe5+1EIg==", "id"=>"114"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 114]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 114]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.7ms)
+  Rendered articles/index.html within layouts/application (6.3ms)
+Completed 200 OK in 95ms (Views: 89.0ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/articles/112" for ::1 at 2015-09-23 20:58:08 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"D9wLyEcWeJlJkiXzUFzM2dvkQ1gm/s6mSAyTFfV7zgNN7I88DcSqNYC4+iLoW+a0Eod7hAfEEJuUhx0RkiM8aQ==", "id"=>"112"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 112]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 112]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (2.9ms)
+  Rendered articles/index.html within layouts/application (7.0ms)
+Completed 200 OK in 82ms (Views: 74.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 20:58:14 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BTgUWty2Iewz2izB6y2MBJyjB2PhWaDPFxoDo+bryK1HCJCulmTzQPrw8xBTKqZpVcA/v8BjfvLLkY2ngbM6xw==", "title"=>"Japan", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Japan"], ["tweet_1", "bills_japan_fan: bills　混雑時でも稀にテラス席やカウンター席になら早め案内してもらうことができます（その後の席移動は不可でした）"], ["tweet_2", "mainourancul3: Nike AIR MAX 90 ESSENTIALS SQUADRON BLUE BLACK 537384-414 Running Shoes Japan 1 http://t.co/It92upi9O4 http://t.co/RwEulD8bHA"], ["tweet_3", "mainourancul3: Nike AIR MAX 90 ESSENTIALS SQUADRON BLUE BLACK 537384-414 Running Shoes Japan 1 http://t.co/It92upi9O4 http://t.co/ejknsCJjFD"], ["tweet_4", "EBooks099: http://t.co/5CF42fMqBK Urawaza: Secret Everyday Tips and Tricks from Japan\n\nUrawaza: Secret Everyday Tips and Tri… http://t.co/KMiy8T1ir8"], ["tweet_5", "_roxas1: RT @only_bomi: 150921 Apink at 1st Japan Live Tour at Osaka || by MrBOO_APINK http://t.co/KD22h5wmVe"], ["user_id", 1], ["created_at", "2015-09-24 00:58:15.449375"], ["updated_at", "2015-09-24 00:58:15.449375"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (2.8ms)
+  Rendered articles/index.html within layouts/application (8.4ms)
+Completed 200 OK in 1095ms (Views: 61.4ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 20:58:20 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oPOHI3WMDesW3ZtCj0NCXy5ZENnSmFLXp485GDsNASbiwwPXP17fR9/3RJM3RGgy5zooBfOijOp7BLccXFXzTA==", "title"=>"Football", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Football"], ["picture_url", "http://pbs.twimg.com/media/CPoTmI4WgAAKJ9M.jpg"], ["tweet_1", "AuctionLavish: Sun SOCCERCARD No 326 - Newcastle United Sunderland LEN SHACKLETON football card http://t.co/IgP0TsxLpJ http://t.co/6brRxmdAGq"], ["tweet_2", "iammarizbeuty: RT @ConceptGrp: Spain’s Real Madrid to conduct football clinics in Phl http://t.co/S7S9kDf5vQ http://t.co/0qhWKC7NDP"], ["tweet_3", "millerk10: RT @WXCaldwell: #FRIDAYFOOTBALL: The Hibreten Vs. South Caldwell High School Football game scheduled this Friday has been moved... http://t…"], ["tweet_4", "Amster234: RT @harryflashbacks: ran across a football field just to hug niall http://t.co/Ry1XdAtats"], ["tweet_5", "KingGeury: #Philly #RushingYards #DemarcoMurray #LOL #Lmao #NFL #NFLMEME #EAGLES #NFCEAST #NFC #Football… https://t.co/b55o8cDj4h"], ["user_id", 1], ["created_at", "2015-09-24 00:58:21.345496"], ["updated_at", "2015-09-24 00:58:21.345496"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.5ms)
+  Rendered articles/index.html within layouts/application (4.3ms)
+Completed 200 OK in 573ms (Views: 51.5ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/articles/111" for ::1 at 2015-09-23 20:58:27 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XqpFEsIo2fbVOFcwKz5vV+/1bkpMgqdNzVGluVfRklEcmsHmiPoLWhwSiOGTOUU6JpZWlm24eXAR2iu9MIlgOw==", "id"=>"111"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 111]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 111]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.9ms)
+  Rendered articles/index.html within layouts/application (6.3ms)
+Completed 200 OK in 59ms (Views: 53.1ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/articles" for ::1 at 2015-09-23 20:58:33 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zz3r8bGmbAXzMwoTgCJjeHILTCwEeA86FArH/a9teVElDW8F+3S+qToZ1cI4JUkVu2h08CVC0QfIgUn5yDWLOw==", "title"=>"Breaking news", "commit"=>"Add Article"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Breaking news"], ["tweet_1", "anissira: RT @brownjenjen: Azealia Banks Calls Flight Attendant a Homophobic Slur During Plane http://t.co/SJf9DE9Ss7"], ["tweet_2", "DontCorlii: RT @XXL: Breaking down @youngthug's best  guest verses of 2015 (so far): http://t.co/SZlNGBlKwU http://t.co/92p96ktJcR"], ["tweet_3", "caseyttha: RT @brownjenjen: Azealia Banks Calls Flight Attendant a Homophobic Slur During Plane http://t.co/SJf9DE9Ss7"], ["tweet_4", "chemitw: RT @brownjenjen: Azealia Banks Calls Flight Attendant a Homophobic Slur During Plane http://t.co/SJf9DE9Ss7"], ["tweet_5", "BrissieLiveNews: Flashy Sydney councillor re-elected http://t.co/AP9tBT1jJy (News) #brisbane #qld"], ["user_id", 1], ["created_at", "2015-09-24 00:58:34.428151"], ["updated_at", "2015-09-24 00:58:34.428151"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE (1)[0m
+  Rendered articles/_articles.html.erb (1.5ms)
+  Rendered articles/index.html within layouts/application (4.4ms)
+Completed 200 OK in 1165ms (Views: 59.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/refresh" for ::1 at 2015-09-23 20:58:38 -0400
+Processing by ArticlesController#refresh as HTML
+  Parameters: {"authenticity_token"=>"fIHQ+e+nALbu5OU9LYYTKQHeQ+3mvhk96UMum33p7cc+sVQNpXXSGifOOuyVgTlEyL17MceExwA1yKCfGrEfrQ=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Migrants"], ["picture_url", "http://pbs.twimg.com/media/CPLz4RSWsAAQMmv.jpg"], ["tweet_1", "Globalnewscom1: RT @nytimes: Busy morning? Here's what you need to know to start your day. http://t.co/64sXnHhgri http://t.co/7MG6PilxPg"], ["tweet_2", "MrAyeDee: RT @washingtonpost: Migrants are disguising themselves as Syrians to enter Europe http://t.co/zsTa6XDmy8"], ["tweet_3", "ClimateRetweet: RT Pope takes climate change establishment line whilst encouraging mass immigration, like UN. Migrants increase ca… https://t.co/mNcf7SCpOS"], ["tweet_4", "argentos5: RT @domesticworkers: #100Women100Miles made it to Washington DC. Our hope? Dignity, compassion &amp; inclusion for all migrants. #PopeInUS http…"], ["tweet_5", "Globalnewscom1: RT @MichelleFields: US has taken 24 times more migrants than the Pope's home country of Argentina http://t.co/nPanZ6VRFS #WakeUpAmerica #Ca…"], ["user_id", 1], ["created_at", "2015-09-24 00:58:39.557487"], ["updated_at", "2015-09-24 00:58:39.557487"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 110]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Iphone"], ["tweet_1", "SociativeiPhone: China's fake Apple Stores alive and well, look to profit on iPhone 6s launch http://t.co/61eSiRKngT #iphone #iphone6s"], ["tweet_2", "andimlanna: RT @TeeSoPettyLike: You have an iPhone 4 girl hush.  https://t.co/GiP8J6xuAU"], ["tweet_3", "caroline__leigh: RT @k99david_: iPhone chargers be lasting me 2 weeks wtf😪"], ["tweet_4", "_iSellDREAMS: @JusC_MON 😩 I hope it's Saturday. I'm gone be working that damn iPhone release 😕"], ["tweet_5", "caro31999: I'm now a D-List celebrity in Kim Kardashian: Hollywood. You can be famous too by playing on iPhone!  http://t.co/bfMQQU4J8n"], ["user_id", 1], ["created_at", "2015-09-24 00:58:40.090329"], ["updated_at", "2015-09-24 00:58:40.090329"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 113]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "articles" ("title", "picture_url", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Japan"], ["picture_url", "http://pbs.twimg.com/media/CPnEVhxWIAELnJK.jpg"], ["tweet_1", "snsd8_Fans: RT @ShadySNSDFacts_: SNSD is the only girlgroup to be in the TOP 3 of Physical (Korea &amp; Japan), Digital and concert attendance! http://t.co…"], ["tweet_2", "cosmodia: ■レディースWebマガジン-『コスモディア・レディース!!』(Cosmodia Ladys):シトウ・レイが手掛ける、新感覚のライフスタイル コミュニティストアがオープン。 - VOGUE JAPAN…[cosmodia… http://t.co/ywXM3Z69K1"], ["tweet_3", "doggie_mbed: | Temp[Celsius]  28.0 | Humid[Percent]  57.7 | Press[hPa]1013.94 | Yokohama,JAPAN(UTC+9) | UTC Thu Sep 24 00:58:07 2015"], ["tweet_4", "ADVSHER8: Beauty : Free shipping　New shower stool Japan original For care For hemorrhoids Valuables http://t.co/QmxZ3pMdVU Deals #9144"], ["tweet_5", "Lotus_Japan: RT @CollabNewsJapan: ノーツの起動画面をカスタマイズ : まだプログラマーですが何か？ via @dotnsf #notesdomino:  http://t.co/WWgMafacpV"], ["user_id", 1], ["created_at", "2015-09-24 00:58:40.547522"], ["updated_at", "2015-09-24 00:58:40.547522"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 115]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Football"], ["tweet_1", "GatorsSRH: #Gators Gators' QB Harris, corner Tabor won't play against Vols http://t.co/AU0H9nwagP #SportsRoadhouse"], ["tweet_2", "Jubah_Langit: #Football: FIFA Sangat Menyedihkan: Pele merasa kasihan melihat kondisi yang dialami FIFA. http://t.co/nPtiq5zWF9"], ["tweet_3", "KrantzBrandon: Drunk football moms are hilarious 😂"], ["tweet_4", "sbncollege: Army Black Knights vs. Eastern Michigan Eagles football preview http://t.co/nD4fVjb623"], ["tweet_5", "DicksonSports: RT @DicksonHerald: APSU teammates unhappy concussions end former Cougar standout Otis Gerron's career: http://t.co/p1QJIivxh8"], ["user_id", 1], ["created_at", "2015-09-24 00:58:41.112812"], ["updated_at", "2015-09-24 00:58:41.112812"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 116]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("title", "tweet_1", "tweet_2", "tweet_3", "tweet_4", "tweet_5", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Breaking news"], ["tweet_1", "iammarizbeuty: RT @ConceptGrp: #BREAKING EU to give extra 1 billion euros to UN refugee agency http://t.co/zkmWMlM8oI"], ["tweet_2", "endlesscycles: Ever want to ride this road, and through this underpass WITHOUT the worry of a car coming up on you?  On October... http://t.co/CQix89pyX2"], ["tweet_3", "tachi_pic_bot: 【LOFT PLUSONE】 「時事ネタプラスワン!」 10/05(月) http://t.co/uLjjFiSXXb  【出演】 プチ鹿島(オフィス北野) 久田将義(「東京 BREAKING NEWS」編集長) 畠山理仁(フリーランスライター) 須田慎一郎 (ジャーナリス..."], ["tweet_4", "anissira: RT @brownjenjen: Azealia Banks Calls Flight Attendant a Homophobic Slur During Plane http://t.co/SJf9DE9Ss7"], ["tweet_5", "DontCorlii: RT @XXL: Breaking down @youngthug's best  guest verses of 2015 (so far): http://t.co/SZlNGBlKwU http://t.co/92p96ktJcR"], ["user_id", 1], ["created_at", "2015-09-24 00:58:41.649145"], ["updated_at", "2015-09-24 00:58:41.649145"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 117]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE (1)
+  Rendered articles/_articles.html.erb (1.7ms)
+  Rendered articles/index.html within layouts/application (5.4ms)
+Completed 200 OK in 2808ms (Views: 49.6ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/" for ::1 at 2015-09-23 20:59:33 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/smallbird.png" for ::1 at 2015-09-23 20:59:33 -0400

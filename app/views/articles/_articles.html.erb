@@ -16,7 +16,12 @@
 
   <%(5 - @articles.length).times do %>
     <div class="child">
-    <p><h1><%= link_to("Add a New Article!", new_article_path)%></h1></p>
+      <h1>Add an article!</h1>
+      <%= form_tag("/articles", method: "post") do %>
+      <%= label_tag(:title, "Subject:")%><br />
+      <%= text_field_tag(:title) %>
+      <%= submit_tag("Add Article")%>
     </div>
+    <%end%>
   <%end%>
 </div>

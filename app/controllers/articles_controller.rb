@@ -5,9 +5,17 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.populate(article_params, current_user)
+    Article.populate(article_params, current_user)
     @articles = Article.where(user_id = current_user.id)
-    render :index
+    @article = Article.last
+    respond_to do |format|
+    if @article.save
+      format.js {}
+      format.json {render json: @article}
+    else
+      render :index
+    end
+  end
   end
 
   def index

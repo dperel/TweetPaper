@@ -3,8 +3,11 @@
    |  Want Fresh News? <%= link_to("Refresh your Paper", '/refresh', :method => :get)%><br />
 </h3>
 </div>
+<%= render "articles/form" %>
 
 <div class="headlineImage"><%= image_tag 'font3.png' %>
 </div>
+
+
 
 <%= render "articles/articles" %>

@@ -1,0 +1,8 @@
+<div class="form">
+<h3>Add a new article</h3>
+<%= form_tag("/articles", remote: true) do %>
+<%= label_tag(:title, "Subject:")%><br />
+<%= text_field_tag(:title) %>
+<%= submit_tag("Add Article")%>
+<%end%>
+</div>

@@ -1,4 +1,4 @@
-<div class="articleHolder">
+<div class="articleHolder" id="articleHolder">
   <% @articles.map do |article|%>
     <div class="child">
       <p><h1><%= article.title.upcase%></h1></p>
@@ -13,15 +13,3 @@
       <%= link_to("Delete section", article_path(article), :method => :delete)%><br />
     </div>
   <%end%>
-
-  <%(5 - @articles.length).times do %>
-    <div class="child">
-      <h1>Add an article!</h1>
-      <%= form_tag("/articles", method: "post") do %>
-      <%= label_tag(:title, "Subject:")%><br />
-      <%= text_field_tag(:title) %>
-      <%= submit_tag("Add Article")%>
-    </div>
-    <%end%>
-  <%end%>
-</div>

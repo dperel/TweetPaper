@@ -15,3 +15,11 @@ To run: Clone the repo, run 'bundle install' in terminal. You will need to add t
   </code></pre>
 
  Once that is set up, run rails server and navigate to localhost:3000 to get started.
+
+
+**Refactoring** 
+I think this app could be improved in several ways. It would be nice to have the feeds autorefresh every minute and even cycle through different articles. Background processing would fit perfectly in this situation. 
+
+Links could be parsed out of the tweets and featured as a small --> type element at the end of each tweet. 
+
+As a more far-out feature, an interest-based clipping service would be interesting. Tweets contaning more than one of your interests could be saved into a "for you" category. 

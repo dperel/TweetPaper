@@ -22,4 +22,4 @@ I think this app could be improved in several ways. It would be nice to have the
 
 Links could be parsed out of the tweets and featured as a small --> type element at the end of each tweet. 
 
-As a more far-out feature, an interest-based clipping service would be interesting. Tweets contaning more than one of your interests could be saved into a "for you" category. 
+As a more far-out feature, an interest-based clipping service would be a useful feature. Tweets contaning more than one of your interests could be saved into a "for you" category. 
